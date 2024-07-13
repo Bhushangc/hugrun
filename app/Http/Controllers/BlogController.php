@@ -54,6 +54,12 @@ class BlogController extends Controller
         if (File::exists($imagePath)) {
             File::delete($imagePath);
         }
+        if($data->polishBlog){
+            $data->polishBlog->delete();
+        }
+        if($data->islandicBlog){
+            $data->islandicBlog->delete();
+        }
         $data->delete();
         return redirect()->route('admin.blog');
     }

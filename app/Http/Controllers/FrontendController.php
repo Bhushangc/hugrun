@@ -65,7 +65,7 @@ class FrontendController extends Controller
         }
       
         $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
-        return view('frontend.article.parents',compact('allBlogs','currentBlog','tags'));
+        return view('frontend.article.islandic_parents',compact('allBlogs','currentBlog','tags'));
 
     }
 
@@ -80,7 +80,7 @@ class FrontendController extends Controller
             $currentBlog->content = $currentBlog->islandicBlog()->first()->content;
         }
         $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
-        return view('frontend.article.health',compact('allBlogs','currentBlog','tags'));
+        return view('frontend.article.islandic_health',compact('allBlogs','currentBlog','tags'));
 
     }
 
@@ -97,7 +97,7 @@ class FrontendController extends Controller
         }
       
         $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
-        return view('frontend.article.parents',compact('allBlogs','currentBlog','tags'));
+        return view('frontend.article.polish_parents',compact('allBlogs','currentBlog','tags'));
 
     }
 
@@ -112,15 +112,27 @@ class FrontendController extends Controller
             $currentBlog->content = $currentBlog->polishBlog()->first()->content;
         }
         $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
-        return view('frontend.article.health',compact('allBlogs','currentBlog','tags'));
+        return view('frontend.article.polish_health',compact('allBlogs','currentBlog','tags'));
 
     }
 
-    public function resources(){
+    public function resources($lan = null){
+        if ($lan == 'is'){
+            return view('frontend.islandic.resources');
+        }
+        if ($lan == 'po'){
+            return view('frontend.polish.resources');
+        }
         return view('frontend.resources');
     }
 
-    public function testimonials(){
+    public function testimonials($lan = null){
+        if ($lan == 'is'){
+            return view('frontend.islandic.testimonials');
+        }
+        if ($lan == 'po'){
+            return view('frontend.polish.testimonials');
+        }
         return view('frontend.testimonials');
     }
 

@@ -34,7 +34,7 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="./hugrun.html"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here" /></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here" /></a>
             </div>
             <div class="nav-right-content">
                 <div class="nav-content">
@@ -56,10 +56,11 @@
                         <img src="{{ asset('images/frontend/eng.png')}}" alt="English" id="current-flag" class="flag-circle" />
                         <span id="current-lang-text">EN</span>
                     </div>
-                    <select id="language-select" onchange="changeLanguage()">
-                        <option value="en" data-img="{{ asset('images/frontend/eng.png')}}">English</option>
-                        <option value="is" data-img="{{ asset('images/frontend/island.png')}}">Icelandic</option>
-                        <option value="pl" data-img="{{ asset('images/frontend/poland.png')}}">Polish</option>
+                    <select id="language-select" onchange="window.location.href = this.value">
+                        <option disabled selected>Select Language</option>
+                        <option value="{{route('resources','en')}}" data-img="{{ asset('images/frontend/eng.png')}}">English</option>
+                        <option value="{{route('resources','is')}}" data-img="{{ asset('images/frontend/island.png')}}">Icelandic</option>
+                        <option value="{{route('resources','po')}}" data-img="{{ asset('images/frontend/poland.png')}}">Polish</option>
                     </select>
                 </div>
                 <div class="mobile-menu-icon">

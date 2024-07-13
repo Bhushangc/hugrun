@@ -35,7 +35,7 @@
         <header>
             <nav>
                 <div class="logo">
-                    <a href="./hugrun.html"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo tutaj" /></a>
+                    <a href="{{ route('home') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo tutaj" /></a>
                 </div>
                 <div class="nav-right-content">
                     <div class="nav-content">

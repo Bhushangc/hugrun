@@ -34,36 +34,36 @@
         <meta property="og:image" content="https://gedfraedsla.is/images/hugrun_logo.svg" />
     </head>
 <body>
- <header>
+    <header>
         <nav>
             <div class="logo">
-                <a href="{{ route('home') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here" /></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="merki hér" /></a>
             </div>
             <div class="nav-right-content">
                 <div class="nav-content">
                     <ul>
-                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="{{ route('home') }}">Heim</a></li>
                         <li>
-                            <a>Articles</a>
+                            <a>Greinar</a>
                             <ul class="dropdown-content">
-                                <li><a href="{{ route('article.parents') }}">For Parents</a></li>
-                                <li><a href="{{ route('article.health') }}">Mental Health</a></li>
+                                <li><a href="{{ route('article.parents') }}">Fyrir foreldra</a></li>
+                                <li><a href="{{ route('article.health') }}">Geðheilbrigði</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ url('/#booking') }}">Book a Lecture</a></li>
-                        <li><a href="{{ url('/about#contact') }}">Contact</a></li>
+                        <li><a href="{{ url('/#booking') }}">Bóka fyrirlestur</a></li>
+                        <li><a href="{{ url('/about#contact') }}">Hafa samband</a></li>
                     </ul>
                 </div>
                 <div class="language-toggle">
                     <div class="selected-language">
-                        <img src="{{ asset('images/frontend/eng.png')}}" alt="English" id="current-flag" class="flag-circle" />
-                        <span id="current-lang-text">EN</span>
+                        <img src="{{ asset('images/frontend/island.png')}}" alt="Enska" id="current-flag" class="flag-circle" />
+                        <span id="current-lang-text">IS</span>
                     </div>
-                    <select id="language-select" onchange="window.location.href = this.value">
+                    <select id="language-select" onchange="window.location.href = this.value;">
                         <option disabled selected>Select Language</option>
-                        <option value="{{route('testimonials','en')}}" data-img="{{ asset('images/frontend/eng.png')}}">English</option>
-                        <option value="{{route('testimonials','is')}}" data-img="{{ asset('images/frontend/island.png')}}">Icelandic</option>
-                        <option value="{{route('testimonials','po')}}" data-img="{{ asset('images/frontend/poland.png')}}">Polish</option>
+                        <option value="{{ route('testimonials', 'en') }}" data-img="{{ asset('images/frontend/eng.png')}}">English</option>
+                        <option value="{{ route('testimonials', 'is') }}" data-img="{{ asset('images/frontend/island.png')}}">Icelandic</option>
+                        <option value="{{ route('testimonials', 'po') }}" data-img="{{ asset('images/frontend/poland.png')}}">Polish</option>
                     </select>
                 </div>
                 <div class="mobile-menu-icon">
@@ -74,7 +74,7 @@
                 <div class="top-nav">
                     <div class="logo">
                         <a href="./hugrun.html"
-                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
+                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="merki hér"
                         /></a>
                         </div>
                     <div class="mobile-close-icon">
@@ -83,18 +83,18 @@
                 </div>
                 <div class="bottom-nav">
                     <ul>
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="#home">Heim</a></li>
                         <li>
                             <div class="dropdown">
-                                <p onclick="myFunction()" class="dropbtn">Articles</p>
+                                <p onclick="myFunction()" class="dropbtn">Greinar</p>
                                 <div id="myDropdown" class="dropdown-content">
-                                    <a href="./html/articles.html">For Parents</a>
-                                    <a href="./html/articles.html">Mental Health</a>
+                                    <a href="./html/articles.html">Fyrir foreldra</a>
+                                    <a href="./html/articles.html">Geðheilbrigði</a>
                                 </div>
                             </div>
                         </li>
-                        <li><a href="#booking">Book a Lecture</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#booking">Bóka fyrirlestur</a></li>
+                        <li><a href="#">Hafa samband</a></li>
                     </ul>
                 </div>
             </div>
@@ -123,14 +123,15 @@
         <div class="testimonials--div--image">
             <div class="testimonials-content-div">
                 <h3>RAGNAR</h3>
-                <p>"He learned to take responsibility for himself when he was diagnosed with bipolar disorder."</p>
-                <button id="ragnar-btn">Read more</button>
+                <p>"Hann lærði að taka ábyrgð á sjálfum sér þegar hann var greindur með tvíhæða geðsjúkdóm."</p>
+                <button id="ragnar-btn">Lesa meira</button>
             </div>
             <div class="testimonials-image-div">
                 <img src="{{ asset('images/frontend/testimonials/img_1.jpg')}}" alt="#">
             </div>
         </div>
     </section>
+    
     <section id="vala">
         <div class="testimonials--div--image">
             <div class="testimonials-image-div">
@@ -138,23 +139,25 @@
             </div>
             <div class="testimonials-content-div">
                 <h3>VALA KRISTÍN</h3>
-                <p>"The disorder was managed by strengthening the connection with their vulnerable side."</p>
-                <button id="vala-btn">Read more</button>
+                <p>"Röskunin var stjórnuð með því að styrkja tengslin við viðkvæma hliðina."</p>
+                <button id="vala-btn">Lesa meira</button>
             </div>
         </div>
     </section>
+    
     <section id="aron">
         <div class="testimonials--div--image">
             <div class="testimonials-content-div">
                 <h3>ARON MÁR</h3>
-                <p>"Boys need to talk about their feelings. A new generation of emotionally aware individuals will make us a better society."</p>
-                <button id="aron-btn">Read more</button>
+                <p>"Drengir þurfa að tala um tilfinningar sínar. Ný kynslóð með tilfinningavísu einstaklinga mun gera okkur að betri samfélagi."</p>
+                <button id="aron-btn">Lesa meira</button>
             </div>
             <div class="testimonials-image-div">
                 <img src="{{ asset('images/frontend/testimonials/img_3.jpg')}}" alt="">
             </div>
         </div>
     </section>
+    
     <section id="tryggvi">
         <div class="testimonials--div--image">
             <div class="testimonials-image-div">
@@ -162,23 +165,25 @@
             </div>
             <div class="testimonials-content-div">
                 <h3>TRYGGVI</h3>
-                <p>"Sometimes you just need to shuffle the cards you've been dealt and start anew."</p>
-                <button id="tryggvi-btn">Read more</button>
+                <p>"Stundum þarftu bara að blanda kortunum sem þú hefur fengið og byrja á nýtt."</p>
+                <button id="tryggvi-btn">Lesa meira</button>
             </div>
         </div>
     </section>
+    
     <section id="huld">
         <div class="testimonials--div--image">
             <div class="testimonials-content-div">
                 <h3>HREFNA HULD</h3>
-                <p>"Discussing life with schizophrenia, stigma, and the importance of seeking help."</p>
-                <button id="huld-btn">Read more</button>
+                <p>"Ræða lífið með geðsjúkdómi, rökræði og mikilvægi þess að leita sér hjálpar."</p>
+                <button id="huld-btn">Lesa meira</button>
             </div>
             <div class="testimonials-image-div">
                 <img src="{{ asset('images/frontend/testimonials/img_5.jpg')}}" alt="#">
             </div>
-        </div>            
+        </div>
     </section>
+    
     <section id="sonja">
         <div class="testimonials--div--image">
             <div class="testimonials-image-div">
@@ -186,23 +191,25 @@
             </div>
             <div class="testimonials-content-div">
                 <h3>SONJA BJÖRG</h3>
-                <p>"It emphasizes the need for increased discussion about the caregivers of those with mental illness."</p>
-                <button id="sonja-btn">Read more</button>
+                <p>"Það leggur áherslu á þörfina fyrir aukna umræðu um umönnunaraðila þeirra sem hafa geðsjúkdóma."</p>
+                <button id="sonja-btn">Lesa meira</button>
             </div>
         </div>
     </section>
+    
     <section id="iduun">
         <div class="testimonials--div--image">
             <div class="testimonials-content-div">
                 <h3>SONJA BJÖRG</h3>
-                <p>"It emphasizes the need for increased discussion about the caregivers of those with mental illness."</p>
-                <button id="iduun-btn">Read more</button>
+                <p>"Það leggur áherslu á þörfina fyrir aukna umræðu um umönnunaraðila þeirra sem hafa geðsjúkdóma."</p>
+                <button id="iduun-btn">Lesa meira</button>
             </div>
             <div class="testimonials-image-div">
                 <img src="{{ asset('images/frontend/testimonials/img_7.jpg')}}" alt="">
             </div>
         </div>
     </section>
+    
     <footer>
         <div class="footer">
             <div class="social-media">

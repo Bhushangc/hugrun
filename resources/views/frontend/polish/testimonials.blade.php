@@ -34,30 +34,30 @@
         <meta property="og:image" content="https://gedfraedsla.is/images/hugrun_logo.svg" />
     </head>
 <body>
- <header>
+    <header>
         <nav>
             <div class="logo">
-                <a href="{{ route('home') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here" /></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo tutaj" /></a>
             </div>
             <div class="nav-right-content">
                 <div class="nav-content">
                     <ul>
-                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="{{ route('home') }}">Strona główna</a></li>
                         <li>
-                            <a>Articles</a>
+                            <a>Artykuły</a>
                             <ul class="dropdown-content">
-                                <li><a href="{{ route('article.parents') }}">For Parents</a></li>
-                                <li><a href="{{ route('article.health') }}">Mental Health</a></li>
+                                <li><a href="{{ route('article.parents') }}">Dla rodziców</a></li>
+                                <li><a href="{{ route('article.health') }}">Zdrowie psychiczne</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ url('/#booking') }}">Book a Lecture</a></li>
-                        <li><a href="{{ url('/about#contact') }}">Contact</a></li>
+                        <li><a href="{{ url('/#booking') }}">Zarezerwuj wykład</a></li>
+                        <li><a href="{{ url('/about#contact') }}">Kontakt</a></li>
                     </ul>
                 </div>
                 <div class="language-toggle">
                     <div class="selected-language">
-                        <img src="{{ asset('images/frontend/eng.png')}}" alt="English" id="current-flag" class="flag-circle" />
-                        <span id="current-lang-text">EN</span>
+                        <img src="{{ asset('images/frontend/poland.png')}}" alt="English" id="current-flag" class="flag-circle" />
+                        <span id="current-lang-text">PO</span>
                     </div>
                     <select id="language-select" onchange="window.location.href = this.value">
                         <option disabled selected>Select Language</option>
@@ -74,7 +74,7 @@
                 <div class="top-nav">
                     <div class="logo">
                         <a href="./hugrun.html"
-                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
+                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo tutaj"
                         /></a>
                         </div>
                     <div class="mobile-close-icon">
@@ -83,18 +83,18 @@
                 </div>
                 <div class="bottom-nav">
                     <ul>
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="#home">Strona główna</a></li>
                         <li>
                             <div class="dropdown">
-                                <p onclick="myFunction()" class="dropbtn">Articles</p>
+                                <p onclick="myFunction()" class="dropbtn">Artykuły</p>
                                 <div id="myDropdown" class="dropdown-content">
-                                    <a href="./html/articles.html">For Parents</a>
-                                    <a href="./html/articles.html">Mental Health</a>
+                                    <a href="./html/articles.html">Dla rodziców</a>
+                                    <a href="./html/articles.html">Zdrowie psychiczne</a>
                                 </div>
                             </div>
                         </li>
-                        <li><a href="#booking">Book a Lecture</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#booking">Zarezerwuj wykład</a></li>
+                        <li><a href="#">Kontakt</a></li>
                     </ul>
                 </div>
             </div>
@@ -119,18 +119,20 @@
             <a href="javascript:void(0);" id="scrollToTop"> <div class="circle"> <i class="fa-solid fa-arrow-up"></i> </div></a>
         </div>
     </section>
+    
     <section id="ragnar">
         <div class="testimonials--div--image">
             <div class="testimonials-content-div">
                 <h3>RAGNAR</h3>
-                <p>"He learned to take responsibility for himself when he was diagnosed with bipolar disorder."</p>
-                <button id="ragnar-btn">Read more</button>
+                <p>"Nauczył się brać odpowiedzialność za siebie po zdiagnozowaniu u niego zaburzenia dwubiegunowego."</p>
+                <button id="ragnar-btn">Czytaj więcej</button>
             </div>
             <div class="testimonials-image-div">
                 <img src="{{ asset('images/frontend/testimonials/img_1.jpg')}}" alt="#">
             </div>
         </div>
     </section>
+    
     <section id="vala">
         <div class="testimonials--div--image">
             <div class="testimonials-image-div">
@@ -138,23 +140,25 @@
             </div>
             <div class="testimonials-content-div">
                 <h3>VALA KRISTÍN</h3>
-                <p>"The disorder was managed by strengthening the connection with their vulnerable side."</p>
-                <button id="vala-btn">Read more</button>
+                <p>"Zaburzenie zostało zarządzane poprzez wzmocnienie połączenia z ich wrażliwą stroną."</p>
+                <button id="vala-btn">Czytaj więcej</button>
             </div>
         </div>
     </section>
+    
     <section id="aron">
         <div class="testimonials--div--image">
             <div class="testimonials-content-div">
                 <h3>ARON MÁR</h3>
-                <p>"Boys need to talk about their feelings. A new generation of emotionally aware individuals will make us a better society."</p>
-                <button id="aron-btn">Read more</button>
+                <p>"Chłopcy muszą rozmawiać o swoich uczuciach. Nowe pokolenie emocjonalnie świadomych osób uczyni nas lepszym społeczeństwem."</p>
+                <button id="aron-btn">Czytaj więcej</button>
             </div>
             <div class="testimonials-image-div">
                 <img src="{{ asset('images/frontend/testimonials/img_3.jpg')}}" alt="">
             </div>
         </div>
     </section>
+    
     <section id="tryggvi">
         <div class="testimonials--div--image">
             <div class="testimonials-image-div">
@@ -162,23 +166,25 @@
             </div>
             <div class="testimonials-content-div">
                 <h3>TRYGGVI</h3>
-                <p>"Sometimes you just need to shuffle the cards you've been dealt and start anew."</p>
-                <button id="tryggvi-btn">Read more</button>
+                <p>"Czasami musisz po prostu przetasować karty, które dostałeś, i zacząć od nowa."</p>
+                <button id="tryggvi-btn">Czytaj więcej</button>
             </div>
         </div>
     </section>
+    
     <section id="huld">
         <div class="testimonials--div--image">
             <div class="testimonials-content-div">
                 <h3>HREFNA HULD</h3>
-                <p>"Discussing life with schizophrenia, stigma, and the importance of seeking help."</p>
-                <button id="huld-btn">Read more</button>
+                <p>"Omawianie życia z schizofrenią, stygmatem i znaczeniem szukania pomocy."</p>
+                <button id="huld-btn">Czytaj więcej</button>
             </div>
             <div class="testimonials-image-div">
                 <img src="{{ asset('images/frontend/testimonials/img_5.jpg')}}" alt="#">
             </div>
-        </div>            
+        </div>
     </section>
+    
     <section id="sonja">
         <div class="testimonials--div--image">
             <div class="testimonials-image-div">
@@ -186,28 +192,30 @@
             </div>
             <div class="testimonials-content-div">
                 <h3>SONJA BJÖRG</h3>
-                <p>"It emphasizes the need for increased discussion about the caregivers of those with mental illness."</p>
-                <button id="sonja-btn">Read more</button>
+                <p>"Podkreśla potrzebę zwiększenia dyskusji na temat opiekunów osób z chorobami psychicznymi."</p>
+                <button id="sonja-btn">Czytaj więcej</button>
             </div>
         </div>
     </section>
+    
     <section id="iduun">
         <div class="testimonials--div--image">
             <div class="testimonials-content-div">
                 <h3>SONJA BJÖRG</h3>
-                <p>"It emphasizes the need for increased discussion about the caregivers of those with mental illness."</p>
-                <button id="iduun-btn">Read more</button>
+                <p>"Podkreśla potrzebę zwiększenia dyskusji na temat opiekunów osób z chorobami psychicznymi."</p>
+                <button id="iduun-btn">Czytaj więcej</button>
             </div>
             <div class="testimonials-image-div">
                 <img src="{{ asset('images/frontend/testimonials/img_7.jpg')}}" alt="">
             </div>
         </div>
     </section>
+    
     <footer>
         <div class="footer">
             <div class="social-media">
                 <div>
-                    <span>Get connected with us on social networks:</span>
+                    <span>Bądź w kontakcie z nami na mediach społecznościowych:</span>
                 </div>
             <div>
                 <a href="mailto:hugrunhugur@gmail.com"><i class="fas fa-envelope" ></i></a>
@@ -223,36 +231,36 @@
                 <div class="footer-column-office">
                     <div class="logo">
                         <a href="./hugrun.html"
-                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
+                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo tutaj"
                         /></a>
                         </div>
-                    <p>Hugrún, an organization for mental health education, was established in the spring of 2016 by students in nursing, medicine and psychology at the University of Iceland.
+                    <p>Hugrún, organizacja edukacyjna dotycząca zdrowia psychicznego, została założona wiosną 2016 roku przez studentów pielęgniarstwa, medycyny i psychologii na Uniwersytecie Islandzkim.
                     </p>
                 </div>
                 <div class="footer-column">
-                    <h6>Useful links</h6>
-                    <p><a href="{{ route('home') }}">Home</a></p>
+                    <h6>Przydatne linki</h6>
+                    <p><a href="{{ route('home') }}">Strona główna</a></p>
                     <div class="article-links">
-                        <p><a>Article</a></p>
+                        <p><a>Artykuł</a></p>
                         <div class="sub-links">
-                            <p><a href="{{ route('article.parents') }}">For Parents</a></p>
-                            <p><a href="{{ route('article.health') }}">Mental Health</a></p>
+                            <p><a href="{{ route('article.parents') }}">Dla rodziców</a></p>
+                            <p><a href="{{ route('article.health') }}">Zdrowie psychiczne</a></p>
                         </div>
                     </div>
-                    <p><a href="{{ url('/#booking') }}">Book Lecture</a></p>
-                    <p><a href="{{ url('/about#contact') }}">Contact</a></p>
-                    <p><a href="{{ route('about') }}">About</a></p>
+                    <p><a href="{{ url('/#booking') }}">Zarezerwuj wykład</a></p>
+                    <p><a href="{{ url('/about#contact') }}">Kontakt</a></p>
+                    <p><a href="{{ route('about') }}">O nas</a></p>
                 </div>
                 
                 <div class="footer-column">
-                    <h6>Contact</h6>
-                    <p><i class="fas fa-home"></i> Iceland</p>
+                    <h6>Kontakt</h6>
+                    <p><i class="fas fa-home"></i> Islandia</p>
                     <p><i class="fas fa-envelope"></i> hugrunhugur@gmail.com</p>
                     
                 </div>
             </div>
             <div class="copy-right">
-                &copy; 2020 Copyright:
+                &copy; 2020 Prawa autorskie:
                 <a href="https://gedfraedsla.is/"
                 ><span>gedfraedsla.is</span></a>
             </div>

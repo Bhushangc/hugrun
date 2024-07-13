@@ -30,38 +30,44 @@
         <meta property="og:url" content="https://gedfraedsla.is/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://gedfraedsla.is/images/hugrun_logo.svg" />
+
+        <!-- dynamic tags -->
+        @foreach ($tags as $tag)
+        <meta name="keywords" content="{{$tag}}">
+        @endforeach
+       
     </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="{{ route('home') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here" /></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="merki hér" /></a>
             </div>
             <div class="nav-right-content">
                 <div class="nav-content">
                     <ul>
-                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="{{ route('home') }}">Heim</a></li>
                         <li>
-                            <a>Articles</a>
+                            <a>Greinar</a>
                             <ul class="dropdown-content">
-                                <li><a href="{{ route('article.parents') }}">For Parents</a></li>
-                                <li><a href="{{ route('article.health') }}">Mental Health</a></li>
+                                <li><a href="{{ route('article.parents') }}">Fyrir foreldra</a></li>
+                                <li><a href="{{ route('article.health') }}">Geðheilbrigði</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ url('/#booking') }}">Book a Lecture</a></li>
-                        <li><a href="{{ url('/about#contact') }}">Contact</a></li>
+                        <li><a href="{{ url('/#booking') }}">Bóka fyrirlestur</a></li>
+                        <li><a href="{{ url('/about#contact') }}">Hafa samband</a></li>
                     </ul>
                 </div>
                 <div class="language-toggle">
                     <div class="selected-language">
-                        <img src="{{ asset('images/frontend/eng.png')}}" alt="English" id="current-flag" class="flag-circle" />
-                        <span id="current-lang-text">EN</span>
+                        <img src="{{ asset('images/frontend/island.png')}}" alt="Enska" id="current-flag" class="flag-circle" />
+                        <span id="current-lang-text">IS</span>
                     </div>
                     <select id="language-select" onchange="window.location.href = this.value">
                         <option disabled selected>Select Language</option>
-                        <option value="{{route('home','en')}}" data-img="{{ asset('images/frontend/eng.png')}}">English</option>
-                        <option value="{{route('home','is')}}" data-img="{{ asset('images/frontend/island.png')}}">Icelandic</option>
-                        <option value="{{route('home','po')}}" data-img="{{ asset('images/frontend/poland.png')}}">Polish</option>
+                        <option value="{{route('article.parents',$currentBlog->id)}}" data-img="{{ asset('images/frontend/eng.png')}}">English</option>
+                        <option value="{{ route('article.parents.is', $currentBlog->id) }}" data-img="{{ asset('images/frontend/island.png') }}">Icelandic</option>
+                        <option value="{{ route('article.parents.po', $currentBlog->id) }}" data-img="{{ asset('images/frontend/poland.png') }}">Polish</option>
                     </select>
                 </div>
                 <div class="mobile-menu-icon">
@@ -72,7 +78,7 @@
                 <div class="top-nav">
                     <div class="logo">
                         <a href="./hugrun.html"
-                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
+                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="merki hér"
                         /></a>
                         </div>
                     <div class="mobile-close-icon">
@@ -81,18 +87,18 @@
                 </div>
                 <div class="bottom-nav">
                     <ul>
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="#home">Heim</a></li>
                         <li>
                             <div class="dropdown">
-                                <p onclick="myFunction()" class="dropbtn">Articles</p>
+                                <p onclick="myFunction()" class="dropbtn">Greinar</p>
                                 <div id="myDropdown" class="dropdown-content">
-                                    <a href="./html/articles.html">For Parents</a>
-                                    <a href="./html/articles.html">Mental Health</a>
+                                    <a href="./html/articles.html">Fyrir foreldra</a>
+                                    <a href="./html/articles.html">Geðheilbrigði</a>
                                 </div>
                             </div>
                         </li>
-                        <li><a href="#booking">Book a Lecture</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#booking">Bóka fyrirlestur</a></li>
+                        <li><a href="#">Hafa samband</a></li>
                     </ul>
                 </div>
             </div>
@@ -113,14 +119,14 @@
                     <a href="../hugrun.html"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here" /></a>
                 </div>
                 <h6>Information for Parents > <span>{{ $currentBlog->title }}</span></h6>
-                <h6 class="date"><span>06-21-2024</span></h6>
+                <h6 class="date"><span>{{ $currentBlog->created_at }}</span></h6>
             </div>
             <div class="articles-content-body">
                 <h3>{{ $currentBlog->title }}</h3>
                 <!-- <img src="{{ asset('images/frontend/home-left.jpg')}}" alt="parents"> -->
-                <p>
-                    {{ $currentBlog->content }}
-                </p>
+               
+                {!! $currentBlog->content !!}
+               
                 {{-- <p> &nbsp; &nbsp; Psychiatric education increases the awareness of mental health and mental health problems and can reduce prejudice. Psychiatric education can, therefore, increase the likelihood of people seeking help and reduce the severity of the problem. Psychiatric disorders usually occur at the age of 14-24, although they can begin at any time during one's liftetime. It is immensely important that young people of this age have someone they can reach out to when they are experiencing difficult feelings or symptoms of a mental disorder.</p> <br>
                 <p>&nbsp; &nbsp;The following instructions are intended for the parents, guardians or carers of young people aged 14-18 years. They outline how educational materials on the site can be used to increase awareness and open the discussion about mental health and mental disorders at home. They may be relevant to ages other than 14-18 years, but the educational material to which they refer is specifically made with that age range in mind.</p><br>
                 <p>Read these instructions before discussing the educational material with young people:</p><br>
@@ -168,7 +174,7 @@
             <div class="footer-container">
                 <div class="footer-column-office">
                     <div class="logo">
-                        <a href="../hugrun.html"
+                        <a href="./hugrun.html"
                             ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
                         /></a>
                         </div>
@@ -177,17 +183,17 @@
                 </div>
                 <div class="footer-column">
                     <h6>Useful links</h6>
-                    <p><a href="../hugrun.html">Home</a></p>
+                    <p><a href="{{ route('home') }}">Home</a></p>
                     <div class="article-links">
-                        <p><a href="#">Article</a></p>
+                        <p><a>Article</a></p>
                         <div class="sub-links">
-                            <p><a href="#articles">For Parents</a></p>
-                            <p><a href="#articles">Mental Health</a></p>
+                            <p><a href="{{ route('article.parents') }}">For Parents</a></p>
+                            <p><a href="{{ route('article.health') }}">Mental Health</a></p>
                         </div>
                     </div>
-                    <p><a href="../hugrun.html#booking">Book Lecture</a></p>
-                    <p><a href="./about.html#contact">Contact</a></p>
-                    <p><a href="./about.html#about">About</a></p>
+                    <p><a href="{{ url('/#booking') }}">Book Lecture</a></p>
+                    <p><a href="{{ url('/about#contact') }}">Contact</a></p>
+                    <p><a href="{{ route('about') }}">About</a></p>
                 </div>
                 
                 <div class="footer-column">

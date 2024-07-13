@@ -40,27 +40,27 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="./hugrun.html"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here" /></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="merki hér" /></a>
             </div>
             <div class="nav-right-content">
                 <div class="nav-content">
                     <ul>
-                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="{{ route('home') }}">Heim</a></li>
                         <li>
-                            <a>Articles</a>
+                            <a>Greinar</a>
                             <ul class="dropdown-content">
-                                <li><a href="{{ route('article.parents') }}">For Parents</a></li>
-                                <li><a href="{{ route('article.health') }}">Mental Health</a></li>
+                                <li><a href="{{ route('article.parents') }}">Fyrir foreldra</a></li>
+                                <li><a href="{{ route('article.health') }}">Geðheilbrigði</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ url('/#booking') }}">Book a Lecture</a></li>
-                        <li><a href="{{ url('/about#contact') }}">Contact</a></li>
+                        <li><a href="{{ url('/#booking') }}">Bóka fyrirlestur</a></li>
+                        <li><a href="{{ url('/about#contact') }}">Hafa samband</a></li>
                     </ul>
                 </div>
                 <div class="language-toggle">
                     <div class="selected-language">
-                        <img src="{{ asset('images/frontend/eng.png')}}" alt="English" id="current-flag" class="flag-circle" />
-                        <span id="current-lang-text">EN</span>
+                        <img src="{{ asset('images/frontend/island.png')}}" alt="Enska" id="current-flag" class="flag-circle" />
+                        <span id="current-lang-text">IS</span>
                     </div>
                     <select id="language-select" onchange="window.location.href = this.value">
                         <option disabled selected>Select Language</option>
@@ -77,7 +77,7 @@
                 <div class="top-nav">
                     <div class="logo">
                         <a href="./hugrun.html"
-                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
+                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="merki hér"
                         /></a>
                         </div>
                     <div class="mobile-close-icon">
@@ -86,18 +86,18 @@
                 </div>
                 <div class="bottom-nav">
                     <ul>
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="#home">Heim</a></li>
                         <li>
                             <div class="dropdown">
-                                <p onclick="myFunction()" class="dropbtn">Articles</p>
+                                <p onclick="myFunction()" class="dropbtn">Greinar</p>
                                 <div id="myDropdown" class="dropdown-content">
-                                    <a href="./html/articles.html">For Parents</a>
-                                    <a href="./html/articles.html">Mental Health</a>
+                                    <a href="./html/articles.html">Fyrir foreldra</a>
+                                    <a href="./html/articles.html">Geðheilbrigði</a>
                                 </div>
                             </div>
                         </li>
-                        <li><a href="#booking">Book a Lecture</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#booking">Bóka fyrirlestur</a></li>
+                        <li><a href="#">Hafa samband</a></li>
                     </ul>
                 </div>
             </div>

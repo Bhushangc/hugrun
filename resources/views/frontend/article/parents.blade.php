@@ -63,10 +63,11 @@
                         <img src="{{ asset('images/frontend/eng.png')}}" alt="English" id="current-flag" class="flag-circle" />
                         <span id="current-lang-text">EN</span>
                     </div>
-                    <select id="language-select" onchange="changeLanguage()">
-                        <option value="en" data-img="{{ asset('images/frontend/eng.png')}}">English</option>
-                        <option value="is" data-img="{{ asset('images/frontend/island.png')}}">Icelandic</option>
-                        <option value="pl" data-img="{{ asset('images/frontend/poland.png')}}">Polish</option>
+                    <select id="language-select" onchange="window.location.href = this.value">
+                        <option disabled selected>Select Language</option>
+                        <option value="{{route('article.parents',$currentBlog->id)}}" data-img="{{ asset('images/frontend/eng.png')}}">English</option>
+                        <option value="{{ route('article.parents.is', $currentBlog->id) }}" data-img="{{ asset('images/frontend/island.png') }}">Icelandic</option>
+                        <option value="{{ route('article.parents.po', $currentBlog->id) }}" data-img="{{ asset('images/frontend/poland.png') }}">Polish</option>
                     </select>
                 </div>
                 <div class="mobile-menu-icon">

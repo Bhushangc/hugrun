@@ -30,38 +30,44 @@
         <meta property="og:url" content="https://gedfraedsla.is/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://gedfraedsla.is/images/hugrun_logo.svg" />
+
+        <!-- dynamic tags -->
+        @foreach ($tags as $tag)
+        <meta name="keywords" content="{{$tag}}">
+        @endforeach
+       
     </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="{{ route('home') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here" /></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo tutaj" /></a>
             </div>
             <div class="nav-right-content">
                 <div class="nav-content">
                     <ul>
-                        <li><a href="{{ route('home') }}">Home</a></li>
+                        <li><a href="{{ route('home') }}">Strona główna</a></li>
                         <li>
-                            <a>Articles</a>
+                            <a>Artykuły</a>
                             <ul class="dropdown-content">
-                                <li><a href="{{ route('article.parents') }}">For Parents</a></li>
-                                <li><a href="{{ route('article.health') }}">Mental Health</a></li>
+                                <li><a href="{{ route('article.parents') }}">Dla rodziców</a></li>
+                                <li><a href="{{ route('article.health') }}">Zdrowie psychiczne</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ url('/#booking') }}">Book a Lecture</a></li>
-                        <li><a href="{{ url('/about#contact') }}">Contact</a></li>
+                        <li><a href="{{ url('/#booking') }}">Zarezerwuj wykład</a></li>
+                        <li><a href="{{ url('/about#contact') }}">Kontakt</a></li>
                     </ul>
                 </div>
                 <div class="language-toggle">
                     <div class="selected-language">
-                        <img src="{{ asset('images/frontend/eng.png')}}" alt="English" id="current-flag" class="flag-circle" />
-                        <span id="current-lang-text">EN</span>
+                        <img src="{{ asset('images/frontend/poland.png')}}" alt="English" id="current-flag" class="flag-circle" />
+                        <span id="current-lang-text">PO</span>
                     </div>
                     <select id="language-select" onchange="window.location.href = this.value">
                         <option disabled selected>Select Language</option>
-                        <option value="{{route('home','en')}}" data-img="{{ asset('images/frontend/eng.png')}}">English</option>
-                        <option value="{{route('home','is')}}" data-img="{{ asset('images/frontend/island.png')}}">Icelandic</option>
-                        <option value="{{route('home','po')}}" data-img="{{ asset('images/frontend/poland.png')}}">Polish</option>
+                        <option value="{{route('article.parents',$currentBlog->id)}}" data-img="{{ asset('images/frontend/eng.png')}}">English</option>
+                        <option value="{{ route('article.parents.is', $currentBlog->id) }}" data-img="{{ asset('images/frontend/island.png') }}">Icelandic</option>
+                        <option value="{{ route('article.parents.po', $currentBlog->id) }}" data-img="{{ asset('images/frontend/poland.png') }}">Polish</option>
                     </select>
                 </div>
                 <div class="mobile-menu-icon">
@@ -72,7 +78,7 @@
                 <div class="top-nav">
                     <div class="logo">
                         <a href="./hugrun.html"
-                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
+                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo tutaj"
                         /></a>
                         </div>
                     <div class="mobile-close-icon">
@@ -81,18 +87,18 @@
                 </div>
                 <div class="bottom-nav">
                     <ul>
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="#home">Strona główna</a></li>
                         <li>
                             <div class="dropdown">
-                                <p onclick="myFunction()" class="dropbtn">Articles</p>
+                                <p onclick="myFunction()" class="dropbtn">Artykuły</p>
                                 <div id="myDropdown" class="dropdown-content">
-                                    <a href="./html/articles.html">For Parents</a>
-                                    <a href="./html/articles.html">Mental Health</a>
+                                    <a href="./html/articles.html">Dla rodziców</a>
+                                    <a href="./html/articles.html">Zdrowie psychiczne</a>
                                 </div>
                             </div>
                         </li>
-                        <li><a href="#booking">Book a Lecture</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#booking">Zarezerwuj wykład</a></li>
+                        <li><a href="#">Kontakt</a></li>
                     </ul>
                 </div>
             </div>
@@ -113,14 +119,14 @@
                     <a href="../hugrun.html"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here" /></a>
                 </div>
                 <h6>Information for Parents > <span>{{ $currentBlog->title }}</span></h6>
-                <h6 class="date"><span>06-21-2024</span></h6>
+                <h6 class="date"><span>{{ $currentBlog->created_at }}</span></h6>
             </div>
             <div class="articles-content-body">
                 <h3>{{ $currentBlog->title }}</h3>
                 <!-- <img src="{{ asset('images/frontend/home-left.jpg')}}" alt="parents"> -->
-                <p>
-                    {{ $currentBlog->content }}
-                </p>
+               
+                {!! $currentBlog->content !!}
+               
                 {{-- <p> &nbsp; &nbsp; Psychiatric education increases the awareness of mental health and mental health problems and can reduce prejudice. Psychiatric education can, therefore, increase the likelihood of people seeking help and reduce the severity of the problem. Psychiatric disorders usually occur at the age of 14-24, although they can begin at any time during one's liftetime. It is immensely important that young people of this age have someone they can reach out to when they are experiencing difficult feelings or symptoms of a mental disorder.</p> <br>
                 <p>&nbsp; &nbsp;The following instructions are intended for the parents, guardians or carers of young people aged 14-18 years. They outline how educational materials on the site can be used to increase awareness and open the discussion about mental health and mental disorders at home. They may be relevant to ages other than 14-18 years, but the educational material to which they refer is specifically made with that age range in mind.</p><br>
                 <p>Read these instructions before discussing the educational material with young people:</p><br>
@@ -153,7 +159,7 @@
         <div class="footer">
             <div class="social-media">
                 <div>
-                    <span>Get connected with us on social networks:</span>
+                    <span>Bądź w kontakcie z nami na mediach społecznościowych:</span>
                 </div>
             <div>
                 <a href="mailto:hugrunhugur@gmail.com"><i class="fas fa-envelope" ></i></a>
@@ -168,37 +174,37 @@
             <div class="footer-container">
                 <div class="footer-column-office">
                     <div class="logo">
-                        <a href="../hugrun.html"
-                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
+                        <a href="./hugrun.html"
+                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo tutaj"
                         /></a>
                         </div>
-                    <p>Hugrún, an organization for mental health education, was established in the spring of 2016 by students in nursing, medicine and psychology at the University of Iceland.
+                    <p>Hugrún, organizacja edukacyjna dotycząca zdrowia psychicznego, została założona wiosną 2016 roku przez studentów pielęgniarstwa, medycyny i psychologii na Uniwersytecie Islandzkim.
                     </p>
                 </div>
                 <div class="footer-column">
-                    <h6>Useful links</h6>
-                    <p><a href="../hugrun.html">Home</a></p>
+                    <h6>Przydatne linki</h6>
+                    <p><a href="{{ route('home') }}">Strona główna</a></p>
                     <div class="article-links">
-                        <p><a href="#">Article</a></p>
+                        <p><a>Artykuł</a></p>
                         <div class="sub-links">
-                            <p><a href="#articles">For Parents</a></p>
-                            <p><a href="#articles">Mental Health</a></p>
+                            <p><a href="{{ route('article.parents') }}">Dla rodziców</a></p>
+                            <p><a href="{{ route('article.health') }}">Zdrowie psychiczne</a></p>
                         </div>
                     </div>
-                    <p><a href="../hugrun.html#booking">Book Lecture</a></p>
-                    <p><a href="./about.html#contact">Contact</a></p>
-                    <p><a href="./about.html#about">About</a></p>
+                    <p><a href="{{ url('/#booking') }}">Zarezerwuj wykład</a></p>
+                    <p><a href="{{ url('/about#contact') }}">Kontakt</a></p>
+                    <p><a href="{{ route('about') }}">O nas</a></p>
                 </div>
                 
                 <div class="footer-column">
-                    <h6>Contact</h6>
-                    <p><i class="fas fa-home"></i> Iceland</p>
+                    <h6>Kontakt</h6>
+                    <p><i class="fas fa-home"></i> Islandia</p>
                     <p><i class="fas fa-envelope"></i> hugrunhugur@gmail.com</p>
                     
                 </div>
             </div>
             <div class="copy-right">
-                &copy; 2020 Copyright:
+                &copy; 2020 Prawa autorskie:
                 <a href="https://gedfraedsla.is/"
                 ><span>gedfraedsla.is</span></a>
             </div>
