@@ -73,8 +73,8 @@
             <div class="mobile-nav-content">
                 <div class="top-nav">
                     <div class="logo">
-                        <a href="./hugrun.html"
-                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="merki hér"
+                        <a href="{{ route('home') }}"
+                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
                         /></a>
                         </div>
                     <div class="mobile-close-icon">
@@ -83,18 +83,18 @@
                 </div>
                 <div class="bottom-nav">
                     <ul>
-                        <li><a href="#home">Heim</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
                         <li>
                             <div class="dropdown">
-                                <p onclick="myFunction()" class="dropbtn">Greinar</p>
+                                <p onclick="myFunction()" class="dropbtn">Articles</p>
                                 <div id="myDropdown" class="dropdown-content">
-                                    <a href="./html/articles.html">Fyrir foreldra</a>
-                                    <a href="./html/articles.html">Geðheilbrigði</a>
+                                    <a href="{{ route('article.parents') }}">For Parents</a>
+                                    <a href="{{ route('article.health') }}">Mental Health</a>
                                 </div>
                             </div>
                         </li>
-                        <li><a href="#booking">Bóka fyrirlestur</a></li>
-                        <li><a href="#">Hafa samband</a></li>
+                        <li><a href="{{ url('/#booking') }}">Book a Lecture</a></li>
+                        <li><a href="{{ url('/about#contact') }}">Contact</a></li>
                     </ul>
                 </div>
             </div>

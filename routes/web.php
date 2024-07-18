@@ -22,7 +22,7 @@ Route::get('/home/{lan?}', [FrontendController::class, 'index'])->name('home');
 Route::get('/about/{lan?}', [FrontendController::class, 'about'])->name('about');
 Route::get('/resources/{lan?}', [FrontendController::class, 'resources'])->name('resources');
 Route::get('/testimonials/{lan?}', [FrontendController::class, 'testimonials'])->name('testimonials');
-Route::get('/review/{is?}', [FrontendController::class, 'review'])->name('review');
+Route::get('/review/{name?}/{lan?}', [FrontendController::class, 'review'])->name('review');
 Route::get('/article/parents/{id?}', [FrontendController::class, 'articleParents'])->name('article.parents');
 Route::get('/article/health/{id?}', [FrontendController::class, 'articleMentalHealth'])->name('article.health');
 Route::get('/article/parents/is/{id?}', [FrontendController::class, 'articleIslandicParents'])->name('article.parents.is');

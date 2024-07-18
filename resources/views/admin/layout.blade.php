@@ -9,7 +9,7 @@
 <body>
 	<header class = "heads">
         <a href="{{route('admin.dashboard')}}" style="color:white; text-decoration:none">
-            <img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="">
+            <img width="80px" height="40x" src="{{ asset('images/frontend/hugrun_logo_white.png')}}" alt="">
           </a>
         <nav>
             <ul>

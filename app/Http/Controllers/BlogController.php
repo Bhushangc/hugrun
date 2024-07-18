@@ -40,9 +40,13 @@ class BlogController extends Controller
         // }
         // $storeData['image'] = $imageName;
         $blog = Blog::create($storeData);
-        foreach($request->tags as $tag){
-            Tag::create(['tag'=>$tag,'blog_id'=>$blog->id]);
+        if($request->tags){
+            foreach($request->tags as $tag){
+                Tag::create(['tag'=>$tag,'blog_id'=>$blog->id]);
+            }
+
         }
+       
         return redirect()->route('admin.blog');
         
 
@@ -50,14 +54,10 @@ class BlogController extends Controller
 
     public function delete($id){
         $data = Blog::find($id);
-        $imagePath = public_path('images/blog/' . $data->image);
-        if (File::exists($imagePath)) {
-            File::delete($imagePath);
-        }
-        if($data->polishBlog){
+        if(isset($data->polishBlog)){
             $data->polishBlog->delete();
         }
-        if($data->islandicBlog){
+        if(isset($data->islandicBlog)){
             $data->islandicBlog->delete();
         }
         $data->delete();

@@ -27,6 +27,7 @@
         </div>
         <br>
         <button type="button" onclick="addSection('subtitle')">Add Tags</button>
+        <br> <br>
         <div id="tags">
 
         </div>
@@ -38,6 +39,7 @@
             CKEDITOR.replace('content');
 
             function addSection(type) {
+                
                 const sectionsContainer = document.getElementById('tags');
                 const section = document.createElement('div');
                 section.style.display = 'flex'; 
@@ -48,6 +50,8 @@
                 <button type="button" class="remove-button" onclick="removeSection(this)">Remove</button>
             `;
                 sectionsContainer.appendChild(section);
+                const lineBreak = document.createElement('br');
+                sectionsContainer.appendChild(lineBreak);
             }
 
             function removeSection(button) {

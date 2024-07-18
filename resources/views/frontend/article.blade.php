@@ -71,7 +71,7 @@
             <div class="mobile-nav-content">
                 <div class="top-nav">
                     <div class="logo">
-                        <a href="./hugrun.html"
+                        <a href="{{ route('home') }}"
                             ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
                         /></a>
                         </div>
@@ -81,18 +81,18 @@
                 </div>
                 <div class="bottom-nav">
                     <ul>
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
                         <li>
                             <div class="dropdown">
                                 <p onclick="myFunction()" class="dropbtn">Articles</p>
                                 <div id="myDropdown" class="dropdown-content">
-                                    <a href="./html/articles.html">For Parents</a>
-                                    <a href="./html/articles.html">Mental Health</a>
+                                    <a href="{{ route('article.parents') }}">For Parents</a>
+                                    <a href="{{ route('article.health') }}">Mental Health</a>
                                 </div>
                             </div>
                         </li>
-                        <li><a href="#booking">Book a Lecture</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="{{ url('/#booking') }}">Book a Lecture</a></li>
+                        <li><a href="{{ url('/about#contact') }}">Contact</a></li>
                     </ul>
                 </div>
             </div>

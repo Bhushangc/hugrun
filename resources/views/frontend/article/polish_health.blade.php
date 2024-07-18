@@ -4,9 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Hugrun Articles</title>
-        <link rel="stylesheet" href="{{ asset('css/hugrun.css')}}">
-        <link rel="stylesheet" href="{{ asset('css/hugrunResponsive.css')}}">
-        <link rel="stylesheet" href="{{ asset('css/article.css')}}">
+        <link rel="stylesheet" href="/css/hugrun.css">
+        <link rel="stylesheet" href="/css/article.css">
+        <link rel="stylesheet" href="/css/hugrunResponsive.css">
+
         <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
@@ -64,10 +65,11 @@
                     </div>
                     <select id="language-select" onchange="window.location.href = this.value">
                         <option disabled selected>Select Language</option>
-                        <option value="{{route('article.health','{{$currentBlog->id}}')}}" data-img="{{ asset('images/frontend/eng.png')}}">English</option>
-                        <option value="{{ route('article.health.is', $currentBlog->id) }}" data-img="{{ asset('images/frontend/island.png') }}">Icelandic</option>
-                        <option value="{{ route('article.health.po', $currentBlog->id) }}" data-img="{{ asset('images/frontend/poland.png') }}">Polish</option>
+                        <option value="{{ route('article.health', ['id' => $currentBlog->id]) }}" data-img="{{ asset('images/frontend/eng.png') }}">English</option>
+                        <option value="{{ route('article.health.is', ['id' => $currentBlog->id]) }}" data-img="{{ asset('images/frontend/island.png') }}">Icelandic</option>
+                        <option value="{{ route('article.health.po', ['id' => $currentBlog->id]) }}" data-img="{{ asset('images/frontend/poland.png') }}">Polish</option>
                     </select>
+                    
                 </div>
                 <div class="mobile-menu-icon">
                     <i class="fas fa-bars"></i>
@@ -76,8 +78,8 @@
             <div class="mobile-nav-content">
                 <div class="top-nav">
                     <div class="logo">
-                        <a href="./hugrun.html"
-                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo tutaj"
+                        <a href="{{ route('home') }}"
+                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
                         /></a>
                         </div>
                     <div class="mobile-close-icon">
@@ -86,18 +88,18 @@
                 </div>
                 <div class="bottom-nav">
                     <ul>
-                        <li><a href="#home">Strona główna</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
                         <li>
                             <div class="dropdown">
-                                <p onclick="myFunction()" class="dropbtn">Artykuły</p>
+                                <p onclick="myFunction()" class="dropbtn">Articles</p>
                                 <div id="myDropdown" class="dropdown-content">
-                                    <a href="./html/articles.html">Dla rodziców</a>
-                                    <a href="./html/articles.html">Zdrowie psychiczne</a>
+                                    <a href="{{ route('article.parents') }}">For Parents</a>
+                                    <a href="{{ route('article.health') }}">Mental Health</a>
                                 </div>
                             </div>
                         </li>
-                        <li><a href="#booking">Zarezerwuj wykład</a></li>
-                        <li><a href="#">Kontakt</a></li>
+                        <li><a href="{{ url('/#booking') }}">Book a Lecture</a></li>
+                        <li><a href="{{ url('/about#contact') }}">Contact</a></li>
                     </ul>
                 </div>
             </div>

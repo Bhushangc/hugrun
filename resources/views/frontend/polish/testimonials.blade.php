@@ -73,8 +73,8 @@
             <div class="mobile-nav-content">
                 <div class="top-nav">
                     <div class="logo">
-                        <a href="./hugrun.html"
-                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo tutaj"
+                        <a href="{{ route('home') }}"
+                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
                         /></a>
                         </div>
                     <div class="mobile-close-icon">
@@ -83,18 +83,18 @@
                 </div>
                 <div class="bottom-nav">
                     <ul>
-                        <li><a href="#home">Strona główna</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
                         <li>
                             <div class="dropdown">
-                                <p onclick="myFunction()" class="dropbtn">Artykuły</p>
+                                <p onclick="myFunction()" class="dropbtn">Articles</p>
                                 <div id="myDropdown" class="dropdown-content">
-                                    <a href="./html/articles.html">Dla rodziców</a>
-                                    <a href="./html/articles.html">Zdrowie psychiczne</a>
+                                    <a href="{{ route('article.parents') }}">For Parents</a>
+                                    <a href="{{ route('article.health') }}">Mental Health</a>
                                 </div>
                             </div>
                         </li>
-                        <li><a href="#booking">Zarezerwuj wykład</a></li>
-                        <li><a href="#">Kontakt</a></li>
+                        <li><a href="{{ url('/#booking') }}">Book a Lecture</a></li>
+                        <li><a href="{{ url('/about#contact') }}">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -278,25 +278,25 @@
             }, 0);
         });
         document.getElementById('ragnar-btn').addEventListener('click', function() {
-            window.location.href = '{{ route('review') }}';
+            window.location.href = '{{ route('review', ['name' => 'ragnar', 'lan' => 'po']) }}';
         });
         document.getElementById('vala-btn').addEventListener('click', function() {
-            window.location.href = '{{ url('/testimonials#vala') }}';
+            window.location.href = '{{ route('review', ['name' => 'vala-kristin', 'lan' => 'po']) }}';
         });
         document.getElementById('aron-btn').addEventListener('click', function() {
-            window.location.href = '{{ url('/testimonials#aron') }}';
+            window.location.href = '{{ route('review', ['name' => 'aron-mar', 'lan' => 'po']) }}';
         });
         document.getElementById('tryggvi-btn').addEventListener('click', function() {
-            window.location.href = '{{ url('/testimonials#tryggvi') }}';
+            window.location.href = '{{ route('review', ['name' => 'tryggvi', 'lan' => 'po']) }}';
         });
         document.getElementById('huld-btn').addEventListener('click', function() {
-            window.location.href = '{{ url('/testimonials#huld') }}';
+            window.location.href = '{{ route('review', ['name' => 'hrefna-huld', 'lan' => 'po']) }}';
         });
         document.getElementById('sonja-btn').addEventListener('click', function() {
-            window.location.href = '{{ url('/testimonials#sonja') }}';
+            window.location.href = '{{ route('review', ['name' => 'SONJABJÖRG', 'lan' => 'po']) }}';
         });
         document.getElementById('iduun-btn').addEventListener('click', function() {
-            window.location.href = '{{ url('/testimonials#iduun') }}';
+            window.location.href = '{{ route('review', ['name' => 'IÐUNN', 'lan' => 'po']) }}';
         });
     </script>
 </body>

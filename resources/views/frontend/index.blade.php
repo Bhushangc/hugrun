@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="is">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Hugrun</title>
+        <title>Hugrún</title>
         <link rel="stylesheet" href="{{ asset('css/hugrun.css')}}">
-        <link rel="stylesheet" href="{{ asset('css/hugrunResponsive.css')}}"
+        <link rel="stylesheet" href="{{ asset('css/hugrunResponsive.css')}}">
         <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -21,12 +21,12 @@
         />
 
         <!-- seo meta tag -->
-        <meta name="description" content="Hugrún provides education for young people and offers tailored educational programs for mental health awareness. Explore our resources for parents and mental health information.">
-        <meta name="keywords" content="Hugrún, mental health, education, mental health awareness, resources, lectures, parents, students">
-        <meta name="author" content="Hugrún Organization">
+        <meta name="description" content="Hugrún veitir fræðslu fyrir ungt fólk og býður upp á sérsniðnar fræðsludagskrár um geðheilbrigði. Skoðaðu úrræði okkar fyrir foreldra og upplýsingar um geðheilbrigði.">
+        <meta name="keywords" content="Hugrún, geðheilbrigði, fræðsla, geðheilbrigðisvitund, úrræði, fyrirlestrar, foreldrar, nemendur">
+        <meta name="author" content="Hugrún samtök">
         <link rel="canonical" href="https://gedfraedsla.is/" />
-        <meta property="og:title" content="Hugrun - Mental Health Education" />
-        <meta property="og:description" content="Hugrún provides education for young people and offers tailored educational programs for mental health awareness. Explore our resources for parents and mental health information." />
+        <meta property="og:title" content="Hugrún - Geðheilbrigðisfræðsla" />
+        <meta property="og:description" content="Hugrún veitir fræðslu fyrir ungt fólk og býður upp á sérsniðnar fræðsludagskrár um geðheilbrigði. Skoðaðu úrræði okkar fyrir foreldra og upplýsingar um geðheilbrigði." />
         <meta property="og:url" content="https://gedfraedsla.is/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://gedfraedsla.is/images/hugrun_logo.svg" />
@@ -71,7 +71,7 @@
                 <div class="mobile-nav-content">
                     <div class="top-nav">
                         <div class="logo">
-                            <a href="./hugrun.html"
+                            <a href="{{ route('home') }}"
                                 ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
                             /></a>
                             </div>
@@ -81,18 +81,18 @@
                     </div>
                     <div class="bottom-nav">
                         <ul>
-                            <li><a href="#home">Home</a></li>
+                            <li><a href="{{ route('home') }}">Home</a></li>
                             <li>
                                 <div class="dropdown">
                                     <p onclick="myFunction()" class="dropbtn">Articles</p>
                                     <div id="myDropdown" class="dropdown-content">
-                                        <a href="./html/articles.html">For Parents</a>
-                                        <a href="./html/articles.html">Mental Health</a>
+                                        <a href="{{ route('article.parents') }}">For Parents</a>
+                                        <a href="{{ route('article.health') }}">Mental Health</a>
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="#booking">Book a Lecture</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="{{ url('/#booking') }}">Book a Lecture</a></li>
+                            <li><a href="{{ url('/about#contact') }}">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -116,22 +116,30 @@
             </a>
         </div>
         <div class="home-banner-content">
-            <div class="banner-content">
-            <img src="{{ asset('images/frontend/link.svg')}}" alt="link logo" />
-            <p>ABOUT ORGANIZATION</p>
-            </div>
-            <div class="banner-content">
-            <img src="{{ asset('images/frontend/money.svg')}}" alt="donation logo" />
-            <p>DONATION</p>
-            </div>
-            <div class="banner-content">
-            <img src="{{ asset('images/frontend/bubble.svg')}}" alt="bubble logo" />
-            <p>BOOK A LECTURE</p>
-            </div>
-            <div class="banner-content">
-            <img src="{{ asset('images/frontend/life.svg')}}" alt="life logo" />
-            <p>WHERE TO GO?</p>
-            </div>
+            <a href="{{ route('about') }}">
+                <div class="banner-content">
+                        <img src="{{ asset('images/frontend/link.svg')}}" alt="link logo" />
+                        <p>ABOUT ORGANIZATION</p>
+                </div>
+             </a>
+             <a href="{{ url('/about#support') }}">
+                <div class="banner-content">
+                    <img src="{{ asset('images/frontend/money.svg')}}" alt="donation logo" />
+                    <p>DONATION</p>
+                </div>
+             </a>
+             <a href="{{ url('/#booking') }}">
+                <div class="banner-content">
+                    <img src="{{ asset('images/frontend/bubble.svg')}}" alt="bubble logo" />
+                    <p>BOOK A LECTURE</p>
+                </div>
+             </a>
+             <a href="{{ url('/about#contact') }}">
+                <div class="banner-content">
+                <img src="{{ asset('images/frontend/life.svg')}}" alt="life logo" />
+                <p>WHERE TO GO?</p>
+                </div>
+             </a>
         </div>
         <div>
             <a href="javascript:void(0);" id="scrollToTop"> <div class="circle"> <i class="fa-solid fa-arrow-up"></i> </div></a>

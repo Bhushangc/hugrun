@@ -4,8 +4,6 @@
     cursor: pointer;
 }
 
-
-
 .articles-categories {
     padding: 1.5rem 0 0 5rem;
     position: sticky;
@@ -21,7 +19,13 @@
     width: calc(100% - 20rem); 
 }
 
+.articles-categories-mobile{
+    display: none;
+}
 
+.mobile-category{
+    display: none;
+}
 
 ol {
     list-style: decimal;
@@ -311,6 +315,7 @@ hr{
     margin-bottom: 0.5rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
+    line-clamp: 1;
     -webkit-line-clamp: 1;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -364,9 +369,10 @@ hr{
 }
 
 .form-div{
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 1rem;
     padding-bottom: 8px;
     position: relative;
 }

@@ -135,6 +135,11 @@ header nav{
     padding: 0.2rem 0;
 }
 
+.mobile-menu-icon,
+.mobile-close-icon,
+.mobile-nav-content {
+    display: none ;
+}
 
 /* Home section */
 

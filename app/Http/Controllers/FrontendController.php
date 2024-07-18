@@ -37,6 +37,9 @@ class FrontendController extends Controller
         }
 
         $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
         return view('frontend.article.parents',compact('allBlogs','currentBlog','tags'));
 
     }
@@ -48,6 +51,10 @@ class FrontendController extends Controller
             $currentBlog = Blog::find($id);
         }
         $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
+        
         return view('frontend.article.health',compact('allBlogs','currentBlog','tags'));
 
     }
@@ -65,6 +72,9 @@ class FrontendController extends Controller
         }
       
         $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
         return view('frontend.article.islandic_parents',compact('allBlogs','currentBlog','tags'));
 
     }
@@ -80,6 +90,9 @@ class FrontendController extends Controller
             $currentBlog->content = $currentBlog->islandicBlog()->first()->content;
         }
         $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
         return view('frontend.article.islandic_health',compact('allBlogs','currentBlog','tags'));
 
     }
@@ -97,6 +110,9 @@ class FrontendController extends Controller
         }
       
         $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
         return view('frontend.article.polish_parents',compact('allBlogs','currentBlog','tags'));
 
     }
@@ -112,6 +128,9 @@ class FrontendController extends Controller
             $currentBlog->content = $currentBlog->polishBlog()->first()->content;
         }
         $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
         return view('frontend.article.polish_health',compact('allBlogs','currentBlog','tags'));
 
     }
@@ -136,13 +155,70 @@ class FrontendController extends Controller
         return view('frontend.testimonials');
     }
 
-    public function review($lan = null){
-        if ($lan == 'is'){
-            return view('frontend.islandic.review');
+    public function review($name = null,$lan = null){
+        if($name == 'ragnar'){
+            if ($lan == 'is'){
+                return view('frontend.review.islandic.ragnar');
+            }
+            if ($lan == 'po'){
+                return view('frontend.review.polish.ragnar');
+            }
+            return view('frontend.review.ragnar');
         }
-        if ($lan == 'po'){
-            return view('frontend.polish.review');
+        if($name == 'aron-mar'){
+            if ($lan == 'is'){
+                return view('frontend.review.islandic.aron-mar');
+            }
+            if ($lan == 'po'){
+                return view('frontend.review.polish.aron-mar');
+            }
+            return view('frontend.review.aron-mar');
         }
-        return view('frontend.review');
+        if($name == 'hrefna-huld'){
+            if ($lan == 'is'){
+                return view('frontend.review.islandic.hrefna-huld');
+            }
+            if ($lan == 'po'){
+                return view('frontend.review.polish.hrefna-huld');
+            }
+            return view('frontend.review.hrefna-huld');
+        }
+        if($name == 'IÐUNN'){
+            if ($lan == 'is'){
+                return view('frontend.review.islandic.IÐUNN');
+            }
+            if ($lan == 'po'){
+                return view('frontend.review.polish.IÐUNN');
+            }
+            return view('frontend.review.IÐUNN');
+        }
+        if($name == 'SONJABJÖRG'){
+            if ($lan == 'is'){
+                return view('frontend.review.islandic.SONJABJÖRG');
+            }
+            if ($lan == 'po'){
+                return view('frontend.review.polish.SONJABJÖRG');
+            }
+            return view('frontend.review.SONJABJÖRG');
+        }
+        if($name == 'tryggvi'){
+            if ($lan == 'is'){
+                return view('frontend.review.islandic.tryggvi');
+            }
+            if ($lan == 'po'){
+                return view('frontend.review.polish.tryggvi');
+            }
+            return view('frontend.review.tryggvi');
+        }
+        if($name == 'vala-kristin'){
+            if ($lan == 'is'){
+                return view('frontend.review.islandic.vala-kristin');
+            }
+            if ($lan == 'po'){
+                return view('frontend.review.polish.vala-kristin');
+            }
+            return view('frontend.review.vala-kristin');
+        }
+       
     }
 }

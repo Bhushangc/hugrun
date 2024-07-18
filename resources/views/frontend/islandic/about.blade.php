@@ -71,8 +71,8 @@
             <div class="mobile-nav-content">
                 <div class="top-nav">
                     <div class="logo">
-                        <a href="./hugrun.html"
-                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="merki hér"
+                        <a href="{{ route('home') }}"
+                            ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
                         /></a>
                         </div>
                     <div class="mobile-close-icon">
@@ -81,18 +81,18 @@
                 </div>
                 <div class="bottom-nav">
                     <ul>
-                        <li><a href="#home">Heim</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
                         <li>
                             <div class="dropdown">
-                                <p onclick="myFunction()" class="dropbtn">Greinar</p>
+                                <p onclick="myFunction()" class="dropbtn">Articles</p>
                                 <div id="myDropdown" class="dropdown-content">
-                                    <a href="./html/articles.html">Fyrir foreldra</a>
-                                    <a href="./html/articles.html">Geðheilbrigði</a>
+                                    <a href="{{ route('article.parents') }}">For Parents</a>
+                                    <a href="{{ route('article.health') }}">Mental Health</a>
                                 </div>
                             </div>
                         </li>
-                        <li><a href="#booking">Bóka fyrirlestur</a></li>
-                        <li><a href="#">Hafa samband</a></li>
+                        <li><a href="{{ url('/#booking') }}">Book a Lecture</a></li>
+                        <li><a href="{{ url('/about#contact') }}">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -174,7 +174,7 @@
                     <a href="mailto:inakathinka@gmail.com">inakathinka@gmail.com</a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card visible">
                 <div class="image-card">
                     <img src="{{ asset('images/frontend/bod/inga.jpeg')}}" alt="#">
                 </div>
@@ -184,7 +184,7 @@
                     <a href="mailto:ingabirnasigursteinsd@gmail.com">ingabirnasigursteinsd@gmail.com</a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card visible">
                 <div class="image-card">
                     <img src="{{ asset('images/frontend/bod/hanna.jpeg')}}" alt="#">
                 </div>
@@ -194,7 +194,7 @@
                     <a href="mailto:htp4@hi.is">htp4@hi.is</a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card visible">
                 <div class="image-card">
                     <img src="{{ asset('images/frontend/bod/viktoria.jpeg')}}" alt="#">
                 </div>
@@ -204,7 +204,7 @@
                     <a href="mailto:vittysveins@hotmail.com">vittysveins@hotmail.com</a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card visible">
                 <div class="image-card">
                     <img src="{{ asset('images/frontend/bod/fridbjorg.jpeg')}}" alt="#">
                 </div>
@@ -214,7 +214,7 @@
                     <a href="mailto:flr2@hi.is">flr2@hi.is</a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card visible">
                 <div class="image-card">
                     <img src="{{ asset('images/frontend/bod/sandra.jpeg')}}" alt="#">
                 </div>
@@ -224,7 +224,7 @@
                     <a href="mailto:ssf7@hi.is">ssf7@hi.is</a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card visible">
                 <div class="image-card">
                     <img src="{{ asset('images/frontend/bod/rakel.jpeg')}}" alt="#">
                 </div>
@@ -234,7 +234,7 @@
                     <a href="mailto:ha170032@unak.is">ha170032@unak.is</a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card visible">
                 <div class="image-card">
                     <img src="{{ asset('images/frontend/bod/sara.jpeg')}}" alt="#">
                 </div>
@@ -244,9 +244,6 @@
                     <a href="mailto:srg39@hi.is">srg39@hi.is</a>
                 </div>
             </div>
-        </div>
-        <div class="button-container">
-            <button id="toggleButton" onclick="toggleCards()">Show More</button>
         </div>
     </section>
     <section id="contact">

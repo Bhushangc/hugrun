@@ -28,8 +28,9 @@
 
         </textarea>
         </div>
-        <button type="button" onclick="addSection('subtitle')">Add Tags</button>
         <br>
+        <button type="button" onclick="addSection('subtitle')">Add Tags</button>
+        <br> <br>
         <div id="tags"></div>
         @foreach ($tags as $tag)
             <div class="eachTag" style="display: flex; align-items: center;">
@@ -37,6 +38,7 @@
                 <input type="text" name="tags[]" value='{{ $tag }}' required style="margin-right: 10px;">
                 <button type="button" class="remove-button" onclick="removeSection(this)">Remove</button>
             </div>
+            <br>
         @endforeach
 
 
@@ -57,6 +59,8 @@
                 <button type="button" class="remove-button" onclick="removeSection(this)">Remove</button> 
             `;
                 sectionsContainer.appendChild(section);
+                const lineBreak = document.createElement('br');
+                sectionsContainer.appendChild(lineBreak);
             }
            
             function removeSection(button) {

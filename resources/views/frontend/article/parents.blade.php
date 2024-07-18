@@ -4,9 +4,10 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Hugrun Articles</title>
-        <link rel="stylesheet" href="{{ asset('css/hugrun.css')}}">
-        <link rel="stylesheet" href="{{ asset('css/hugrunResponsive.css')}}">
-        <link rel="stylesheet" href="{{ asset('css/article.css')}}">
+        <link rel="stylesheet" href="/css/hugrun.css">
+        <link rel="stylesheet" href="/css/article.css">
+        <link rel="stylesheet" href="/css/hugrunResponsive.css">
+
         <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
@@ -31,17 +32,16 @@
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://gedfraedsla.is/images/hugrun_logo.svg" />
 
-        <!-- dynamic tags -->
-        @foreach ($tags as $tag)
-        <meta name="keywords" content="{{$tag}}">
-        @endforeach
-       
+         <!-- dynamic tags -->
+         @foreach ($tags as $tag)
+         <meta name="keywords" content="{{$tag}}">
+         @endforeach
     </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="./hugrun.html"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here" /></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here" /></a>
             </div>
             <div class="nav-right-content">
                 <div class="nav-content">
@@ -77,7 +77,7 @@
             <div class="mobile-nav-content">
                 <div class="top-nav">
                     <div class="logo">
-                        <a href="./hugrun.html"
+                        <a href="{{ route('home') }}"
                             ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
                         /></a>
                         </div>
@@ -87,18 +87,18 @@
                 </div>
                 <div class="bottom-nav">
                     <ul>
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
                         <li>
                             <div class="dropdown">
                                 <p onclick="myFunction()" class="dropbtn">Articles</p>
                                 <div id="myDropdown" class="dropdown-content">
-                                    <a href="./html/articles.html">For Parents</a>
-                                    <a href="./html/articles.html">Mental Health</a>
+                                    <a href="{{ route('article.parents') }}">For Parents</a>
+                                    <a href="{{ route('article.health') }}">Mental Health</a>
                                 </div>
                             </div>
                         </li>
-                        <li><a href="#booking">Book a Lecture</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="{{ url('/#booking') }}">Book a Lecture</a></li>
+                        <li><a href="{{ url('/about#contact') }}">Contact</a></li>
                     </ul>
                 </div>
             </div>

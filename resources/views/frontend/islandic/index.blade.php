@@ -71,8 +71,8 @@
                 <div class="mobile-nav-content">
                     <div class="top-nav">
                         <div class="logo">
-                            <a href="./hugrun.html"
-                                ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="merki hér"
+                            <a href="{{ route('home') }}"
+                                ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
                             /></a>
                             </div>
                         <div class="mobile-close-icon">
@@ -81,18 +81,18 @@
                     </div>
                     <div class="bottom-nav">
                         <ul>
-                            <li><a href="#home">Heim</a></li>
+                            <li><a href="{{ route('home') }}">Home</a></li>
                             <li>
                                 <div class="dropdown">
-                                    <p onclick="myFunction()" class="dropbtn">Greinar</p>
+                                    <p onclick="myFunction()" class="dropbtn">Articles</p>
                                     <div id="myDropdown" class="dropdown-content">
-                                        <a href="./html/articles.html">Fyrir foreldra</a>
-                                        <a href="./html/articles.html">Geðheilbrigði</a>
+                                        <a href="{{ route('article.parents') }}">For Parents</a>
+                                        <a href="{{ route('article.health') }}">Mental Health</a>
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="#booking">Bóka fyrirlestur</a></li>
-                            <li><a href="#">Hafa samband</a></li>
+                            <li><a href="{{ url('/#booking') }}">Book a Lecture</a></li>
+                            <li><a href="{{ url('/about#contact') }}">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -116,22 +116,30 @@
             </a>
         </div>
         <div class="home-banner-content">
-            <div class="banner-content">
-            <img src="{{ asset('images/frontend/link.svg')}}" alt="tengill merki" />
-            <p>UM SAMTÖKIN</p>
-            </div>
-            <div class="banner-content">
-            <img src="{{ asset('images/frontend/money.svg')}}" alt="gjöf merki" />
-            <p>GJÖF</p>
-            </div>
-            <div class="banner-content">
-            <img src="{{ asset('images/frontend/bubble.svg')}}" alt="kúla merki" />
-            <p>BÓKA FYRIRLESTUR</p>
-            </div>
-            <div class="banner-content">
-            <img src="{{ asset('images/frontend/life.svg')}}" alt="líf merki" />
-            <p>HVAR Á AÐ FARA?</p>
-            </div>
+            <a href="{{ route('about') }}">
+                <div class="banner-content">
+                <img src="{{ asset('images/frontend/link.svg')}}" alt="tengill merki" />
+                <p>UM SAMTÖKIN</p>
+                </div>
+            </a>
+            <a href="{{ url('/about#support') }}">
+                <div class="banner-content">
+                <img src="{{ asset('images/frontend/money.svg')}}" alt="gjöf merki" />
+                <p>GJÖF</p>
+                </div>
+            </a>
+            <a href="{{ url('/#booking') }}">
+                <div class="banner-content">
+                <img src="{{ asset('images/frontend/bubble.svg')}}" alt="kúla merki" />
+                <p>BÓKA FYRIRLESTUR</p>
+                </div>
+            </a>
+            <a href="{{ url('/about#contact') }}">
+                <div class="banner-content">
+                <img src="{{ asset('images/frontend/life.svg')}}" alt="líf merki" />
+                <p>HVAR Á AÐ FARA?</p>
+                </div>
+            </a>
         </div>
         <div>
             <a href="javascript:void(0);" id="scrollToTop"> <div class="circle"> <i class="fa-solid fa-arrow-up"></i> </div></a>
