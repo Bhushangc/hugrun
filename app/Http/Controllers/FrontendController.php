@@ -34,9 +34,10 @@ class FrontendController extends Controller
         $currentBlog = Blog::where('type','parents')->first();
         if($id){
             $currentBlog = Blog::find($id);
+            $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
         }
 
-        $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
+        
         if(!$currentBlog){
             return back()->with('error','no article');
         }
@@ -49,8 +50,9 @@ class FrontendController extends Controller
         $currentBlog = Blog::where('type','mental_health')->first();
         if($id){
             $currentBlog = Blog::find($id);
+            $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
         }
-        $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
+        
         if(!$currentBlog){
             return back()->with('error','no article');
         }
