@@ -4,9 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
         <title>Hugrun About</title> 
-        <link rel="stylesheet" href="{{ asset('css/hugrun.css')}}">
-        <link rel="stylesheet" href="{{ asset('css/hugrunResponsive.css')}}">  
-        <link rel="stylesheet" href="{{ asset('css/article.css')}}">
+        <link rel="stylesheet" href="../css/hugrun.css" />
+        <link rel="stylesheet" href="../css/article.css">
+        <link rel="stylesheet" href="../css/hugrunResponsive.css">
         <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>

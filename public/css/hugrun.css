@@ -6,6 +6,7 @@
     --option-color: #E5A985;
 }
 
+
 *{
     margin: 0;
     padding: 0;
@@ -368,7 +369,7 @@ button:hover > a{
 
 
 .emergency-content {
-    width: 34rem;
+    width: 55%;
 }
 
 .emergency-content h1{
