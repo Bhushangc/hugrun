@@ -10,14 +10,29 @@
             <div class="articles-title">
                 <h1>Information for Parents</h1> <hr>
                 @foreach ($allBlogs as $blog)
-                    <p @if ($blog->id == $currentBlog->id)id="current-page"@endif><a href="{{ route('article.parents', ['id' => $blog->id]) }}">{{ $blog->title }}</a></p>
+                    <p @if ($blog->id == $currentBlog->id)id="current-page"@endif><a href="{{ route('article.parents.po', ['id' => $blog->id]) }}">{{ $blog->title }}</a></p>
                 @endforeach
+            </div>
+        </div>
+        <div class="mobile-category">
+            <button>Articles</button>
+        </div>
+        <div class="articles-categories-mobile">
+            <div class="articles-title">
+                <div class="top-nav">
+                    <h1>Information for Parents</h1> 
+                </div>
+                <div class="bottom">
+                    @foreach ($allBlogs as $blog)
+                        <p @if ($blog->id == $currentBlog->id)id="current-page"@endif><a href="{{ route('article.parents.po', ['id' => $blog->id]) }}">{{ $blog->title }}</a></p>
+                    @endforeach
+                </div>
             </div>
         </div>
         <div class="articles-contents">
             <div class="articles-contents-heading">
                 <div class="logo">
-                    <a href="../hugrun.html"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here" /></a>
+                    <img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here" />
                 </div>
                 <h6>Information for Parents > <span>{{ $currentBlog->title }}</span></h6>
                 <h6 class="date"><span>{{ $currentBlog->created_at }}</span></h6>
@@ -58,4 +73,5 @@
     </section>
 
     <script src="{{ asset('/js/hugrun.js')}}"></script>
+    <script src="{{ asset('/js/article.js')}}"></script>
 @endsection

@@ -26,9 +26,13 @@ Route::get('/review/{name?}/{lan?}', [FrontendController::class, 'review'])->nam
 Route::get('/article/parents/{id?}', [FrontendController::class, 'articleParents'])->name('article.parents');
 Route::get('/article/health/{id?}', [FrontendController::class, 'articleMentalHealth'])->name('article.health');
 Route::get('/article/parents/is/{id?}', [FrontendController::class, 'articleIslandicParents'])->name('article.parents.is');
+Route::get('/article/islandic/parents', [FrontendController::class, 'articleIslandicParents2'])->name('article.parents.islandic');
 Route::get('/article/health/is/{id?}', [FrontendController::class, 'articleIslandicMentalHealth'])->name('article.health.is');
+Route::get('/article/islandic/health', [FrontendController::class, 'articleIslandicMentalHealth2'])->name('article.health.islandic');
 Route::get('/article/parents/po/{id?}', [FrontendController::class, 'articlePolishParents'])->name('article.parents.po');
+Route::get('/article/polish/parents', [FrontendController::class, 'articlePolishParents2'])->name('article.parents.polish');
 Route::get('/article/health/po/{id?}', [FrontendController::class, 'articlePolishMentalHealth'])->name('article.health.po');
+Route::get('/article/polish/health', [FrontendController::class, 'articlePolishMentalHealth2'])->name('article.health.polish');
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

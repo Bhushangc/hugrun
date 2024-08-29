@@ -77,6 +77,21 @@ class FrontendController extends Controller
         return view('frontend.article.islandic_parents',compact('allBlogs','currentBlog','tags'));
 
     }
+    public function articleIslandicParents2(){
+        $allBlogs = Blog::where('type','parents')->get();
+        $currentBlog = Blog::where('type','parents')->first();
+        if($currentBlog->islandicBlog()->count()>0){
+            $currentBlog->title = $currentBlog->islandicBlog()->first()->title;
+            $currentBlog->content = $currentBlog->islandicBlog()->first()->content;
+        }
+      
+        $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
+        return view('frontend.article.islandic_parents',compact('allBlogs','currentBlog','tags'));
+
+    }
 
     public function articleIslandicMentalHealth($id=null,$lan = null){
         $allBlogs = Blog::where('type','mental_health')->get();
@@ -95,6 +110,20 @@ class FrontendController extends Controller
         return view('frontend.article.islandic_health',compact('allBlogs','currentBlog','tags'));
 
     }
+    public function articleIslandicMentalHealth2(){
+        $allBlogs = Blog::where('type','mental_health')->get();
+        $currentBlog = Blog::where('type','mental_health')->first();
+        if($currentBlog->islandicBlog()->count()>0){
+            $currentBlog->title = $currentBlog->islandicBlog()->first()->title;
+            $currentBlog->content = $currentBlog->islandicBlog()->first()->content;
+        }
+        $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
+        return view('frontend.article.islandic_health',compact('allBlogs','currentBlog','tags'));
+
+    }
 
     public function articlePolishParents($id=null){
         $allBlogs = Blog::where('type','parents')->get();
@@ -102,7 +131,21 @@ class FrontendController extends Controller
         if($id){
             $currentBlog = Blog::find($id);
         }
-        
+        if($currentBlog->polishBlog()->count()>0){
+            $currentBlog->title = $currentBlog->polishBlog()->first()->title;
+            $currentBlog->content = $currentBlog->polishBlog()->first()->content;
+        }
+      
+        $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
+        return view('frontend.article.polish_parents',compact('allBlogs','currentBlog','tags'));
+    }
+    public function articlePolishParents2(){
+        $allBlogs = Blog::where('type','parents')->get();
+        $currentBlog = Blog::where('type','parents')->first();
+
         if($currentBlog->polishBlog()->count()>0){
             $currentBlog->title = $currentBlog->polishBlog()->first()->title;
             $currentBlog->content = $currentBlog->polishBlog()->first()->content;
@@ -122,6 +165,20 @@ class FrontendController extends Controller
         if($id){
             $currentBlog = Blog::find($id);
         }
+        if($currentBlog->polishBlog()->count()>0){
+            $currentBlog->title = $currentBlog->polishBlog()->first()->title;
+            $currentBlog->content = $currentBlog->polishBlog()->first()->content;
+        }
+        $tags = Tag::where('blog_id',$currentBlog->id)->pluck('tag');
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
+        return view('frontend.article.polish_health',compact('allBlogs','currentBlog','tags'));
+
+    }
+    public function articlePolishMentalHealth2(){
+        $allBlogs = Blog::where('type','mental_health')->get();
+        $currentBlog = Blog::where('type','mental_health')->first();
         if($currentBlog->polishBlog()->count()>0){
             $currentBlog->title = $currentBlog->polishBlog()->first()->title;
             $currentBlog->content = $currentBlog->polishBlog()->first()->content;

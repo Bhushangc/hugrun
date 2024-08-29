@@ -36,21 +36,21 @@
 
             <nav>
                 <div class="logo">
-                    <a href="{{ route('home') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo tutaj" /></a>
+                    <a href="{{ route('home','po') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo tutaj" /></a>
                 </div>
                 <div class="nav-right-content">
                     <div class="nav-content">
                         <ul>
-                            <li><a href="{{ route('home') }}">Strona główna</a></li>
+                            <li><a href="{{ route('home','po') }}">Strona główna</a></li>
                             <li>
                                 <a>Artykuły</a>
                                 <ul class="dropdown-content">
-                                    <li><a href="{{ route('article.parents') }}">Dla rodziców</a></li>
-                                    <li><a href="{{ route('article.health') }}">Zdrowie psychiczne</a></li>
+                                    <li><a href="{{ route('article.parents.polish') }}">Dla rodziców</a></li>
+                                    <li><a href="{{ route('article.health.polish') }}">Zdrowie psychiczne</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{ url('/home#booking') }}">Zarezerwuj wykład</a></li>
-                            <li><a href="{{ url('/about') }}">O nas.</a></li>
+                            <li><a href="{{ url('/home/po#booking') }}">Zarezerwuj wykład</a></li>
+                            <li><a href="{{ url('/about/po') }}">O nas</a></li>
                         </ul>
                     </div>
                 
@@ -88,7 +88,7 @@
                 <div class="mobile-nav-content">
                     <div class="top-nav">
                         <div class="logo">
-                            <a href="{{ route('home') }}"
+                            <a href="{{ route('home','po') }}"
                                 ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
                             /></a>
                             </div>
@@ -98,18 +98,18 @@
                     </div>
                     <div class="bottom-nav">
                         <ul>
-                            <li><a href="{{ route('home') }}">Strona główna<</a></li>
+                            <li><a href="{{ route('home','po') }}">Strona główna<</a></li>
                             <li>
                                 <div class="dropdown">
                                     <p onclick="myFunction()" class="dropbtn">Artykuły</p>
                                     <div id="myDropdown" class="dropdown-content">
-                                        <a href="{{ route('article.parents') }}">Dla rodziców</a>
-                                        <a href="{{ route('article.health') }}">Zdrowie psychiczne</a>
+                                        <a href="{{ route('article.parents.polish') }}">Dla rodziców</a>
+                                        <a href="{{ route('article.health.polish') }}">Zdrowie psychiczne</a>
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="{{ url('/home#booking') }}">Zarezerwuj wykład</a></li>
-                            <li><a href="{{ url('/about') }}">O nas.</a></li>
+                            <li><a href="{{ url('/home/p0#booking') }}">Zarezerwuj wykład</a></li>
+                            <li><a href="{{ url('/about/po') }}">O nas</a></li>
                         </ul>
                     </div>
                 </div>
@@ -147,17 +147,17 @@
             </div>
             <div class="footer-column">
                 <h6>Przydatne linki</h6>
-                <p><a href="{{ route('home') }}">Strona główna</a></p>
+                <p><a href="{{ route('home','po') }}">Strona główna</a></p>
                 <div class="article-links">
                     <p><a>Artykuł</a></p>
                     <div class="sub-links">
-                        <p><a href="{{ route('article.parents') }}">Dla rodziców</a></p>
-                        <p><a href="{{ route('article.health') }}">Zdrowie psychiczne</a></p>
+                        <p><a href="{{ route('article.parents.polish') }}">Dla rodziców</a></p>
+                        <p><a href="{{ route('article.health.polish') }}">Zdrowie psychiczne</a></p>
                     </div>
                 </div>
-                <p><a href="{{ url('/home#booking') }}">Zarezerwuj wykład</a></p>
-                <p><a href="{{ url('/about#contact') }}">Kontakt</a></p>
-                <p><a href="{{ route('about') }}">O nas</a></p>
+                <p><a href="{{ url('/home/po#booking') }}">Zarezerwuj wykład</a></p>
+                <p><a href="{{ url('/about/po#contact') }}">Kontakt</a></p>
+                <p><a href="{{ route('about','po') }}">O nas</a></p>
             </div>
             
             <div class="footer-column">

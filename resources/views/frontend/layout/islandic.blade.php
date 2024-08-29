@@ -35,21 +35,21 @@
         <header>
             <nav>
                 <div class="logo">
-                    <a href="{{ route('home') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="merki hér" /></a>
+                    <a href="{{ route('home','is') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="merki hér" /></a>
                 </div>
                 <div class="nav-right-content">
                     <div class="nav-content">
                         <ul>
-                            <li><a href="{{ route('home')  }}">Heim</a></li>
+                            <li><a href="{{ route('home','is')  }}">Heim</a></li>
                             <li>
                                 <a>Greinar</a>
                                 <ul class="dropdown-content">
-                                    <li><a href="{{ route('article.parents') }}">Fyrir foreldra</a></li>
-                                    <li><a href="{{ route('article.health') }}">Geðheilbrigði</a></li>
+                                    <li><a href="{{ route('article.parents.islandic') }}">Fyrir foreldra</a></li>
+                                    <li><a href="{{ route('article.health.islandic') }}">Geðheilbrigði</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{ url('/home#booking') }}">Bóka fyrirlestur</a></li>
-                            <li><a href="{{ url('/about') }}">Um Okkur</a></li>
+                            <li><a href="{{ url('/home/is#booking') }}">Bóka fyrirlestur</a></li>
+                            <li><a href="{{ url('/about/is') }}">Um Okkur</a></li>
                         </ul>
                     </div>
                     <div class="language-toggle">
@@ -86,7 +86,7 @@
                 <div class="mobile-nav-content">
                     <div class="top-nav">
                         <div class="logo">
-                            <a href="{{ route('home') }}"
+                            <a href="{{ route('home','is') }}"
                                 ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
                             /></a>
                             </div>
@@ -96,18 +96,18 @@
                     </div>
                     <div class="bottom-nav">
                         <ul>
-                            <li><a href="{{ route('home') }}">Heim</a></li>
+                            <li><a href="{{ route('home','is') }}">Heim</a></li>
                             <li>
                                 <div class="dropdown">
                                     <p onclick="myFunction()" class="dropbtn">Greinar</p>
                                     <div id="myDropdown" class="dropdown-content">
-                                        <a href="{{ route('article.parents') }}">Fyrir foreldra<</a>
-                                        <a href="{{ route('article.health') }}">Geðheilbrigði</a>
+                                        <a href="{{ route('article.parents.islandic') }}">Fyrir foreldra<</a>
+                                        <a href="{{ route('article.health.islandic') }}">Geðheilbrigði</a>
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="{{ url('/home#booking') }}">Bóka fyrirlestur</a></li>
-                            <li><a href="{{ url('/about') }}">Um Okkur</a></li>
+                            <li><a href="{{ url('/home/is#booking') }}">Bóka fyrirlestur</a></li>
+                            <li><a href="{{ url('/about/is') }}">Um Okkur</a></li>
                         </ul>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
             <div class="footer">
                 <div class="social-media">
                     <div>
-                        <span>Get connected with us on social networks:</span>
+                        <span>Vertu í sambandi við okkur á samfélagsmiðlum:</span>
                     </div>
                 <div>
                     <a href="mailto:hugrunhugur@gmail.com"><i class="fas fa-envelope" ></i></a>
@@ -136,37 +136,37 @@
                 <div class="footer-container">
                     <div class="footer-column-office">
                         <div class="logo">
-                            <a href="./hugrun.html"
-                                ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
+                            <a href="{{ route('home','is') }}"
+                                ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="merki hér"
                             /></a>
                             </div>
-                        <p>Hugrún, an organization for mental health education, was established in the spring of 2016 by students in nursing, medicine and psychology at the University of Iceland.
+                        <p>Hugrún, samtök fyrir geðheilbrigðisfræðslu, voru stofnuð vorið 2016 af nemendum í hjúkrun, læknisfræði og sálfræði við Háskóla Íslands.
                         </p>
                     </div>
                     <div class="footer-column">
-                        <h6>Useful links</h6>
-                        <p><a href="{{ route('home') }}">Home</a></p>
+                        <h6>Nyttir tenglar</h6>
+                        <p><a href="{{ route('home','is') }}">Heim</a></p>
                         <div class="article-links">
-                            <p><a>Article</a></p>
+                            <p><a>Grein</a></p>
                             <div class="sub-links">
-                                <p><a href="{{ route('article.parents') }}">For Parents</a></p>
-                                <p><a href="{{ route('article.health') }}">Mental Health</a></p>
+                                <p><a href="{{ route('article.parents.islandic') }}">Fyrir foreldra</a></p>
+                                <p><a href="{{ route('article.health.islandic') }}">Geðheilbrigði</a></p>
                             </div>
                         </div>
-                        <p><a href="{{ url('/home#booking') }}">Book Lecture</a></p>
-                        <p><a href="{{ url('/about#contact') }}">Contact</a></p>
-                        <p><a href="{{ route('about') }}">About</a></p>
+                        <p><a href="{{ url('/hom/ise#booking') }}">Bóka fyrirlestur</a></p>
+                        <p><a href="{{ url('/about/is#contact') }}">Hafa samband</a></p>
+                        <p><a href="{{ route('about','is') }}">Um</a></p>
                     </div>
                     
                     <div class="footer-column">
-                        <h6>Contact</h6>
-                        <p><i class="fas fa-home"></i> Iceland</p>
+                        <h6>Hafa samband</h6>
+                        <p><i class="fas fa-home"></i> Ísland</p>
                         <p><i class="fas fa-envelope"></i> hugrunhugur@gmail.com</p>
                         
                     </div>
                 </div>
                 <div class="copy-right">
-                    &copy; 2020 Copyright:
+                    &copy; 2020 Höfundarréttur:
                     <a href="https://gedfraedsla.is/"
                     ><span>gedfraedsla.is</span></a>
                 </div>

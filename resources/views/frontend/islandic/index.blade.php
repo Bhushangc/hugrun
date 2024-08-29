@@ -7,14 +7,14 @@
 @section('content')
         <section id="home">
         <div class="home-article">
-            <a href="{{ route('article.parents') }}" class="left-home-content"
+            <a href="{{ route('article.parents.islandic') }}" class="left-home-content"
             ><div>
                 <div class="home-content">
                 <h2>Upplýsingar Fyrir Foreldra</h2>
                 </div>
             </div></a
             >
-            <a href="{{ route('article.health') }}" class="right-home-content"
+            <a href="{{ route('article.health.islandic') }}" class="right-home-content"
             ><div>
                 <div class="home-content">
                 <h2>Upplýsingar Um Geðheilbrigði</h2>
@@ -23,25 +23,25 @@
             </a>
         </div>
         <div class="home-banner-content">
-            <a href="{{ route('about') }}">
+            <a href="{{ route('about','is') }}">
                 <div class="banner-content">
                 <img src="{{ asset('images/frontend/link.svg')}}" alt="tengill merki" />
                 <p>UM SAMTÖKIN</p>
                 </div>
             </a>
-            <a href="{{ url('/about#support') }}">
+            <a href="{{ url('/about/is#support') }}">
                 <div class="banner-content">
                 <img src="{{ asset('images/frontend/money.svg')}}" alt="gjöf merki" />
                 <p>GJÖF</p>
                 </div>
             </a>
-            <a href="{{ url('/home#booking') }}">
+            <a href="{{ url('/home/is#booking') }}">
                 <div class="banner-content">
                 <img src="{{ asset('images/frontend/bubble.svg')}}" alt="kúla merki" />
                 <p>BÓKA FYRIRLESTUR</p>
                 </div>
             </a>
-            <a href="{{ url('/about#contact') }}">
+            <a href="{{ url('/about/is#contact') }}">
                 <div class="banner-content">
                 <img src="{{ asset('images/frontend/life.svg')}}" alt="líf merki" />
                 <p>HVAR Á AÐ FARA?</p>
@@ -114,13 +114,13 @@
             }, 0);
         });
         document.getElementById('book-now-button').addEventListener('click', function() {
-            window.location.href = '{{ route('about') }}';
+            window.location.href = '{{ route('about','is') }}';
         });
         document.getElementById('resource-button').addEventListener('click', function() {
-            window.location.href = '{{ route('resources') }}';
+            window.location.href = '{{ route('resources','is') }}';
         });
         document.getElementById('testimonials-button').addEventListener('click', function() {
-            window.location.href = '{{ route('testimonials') }}';
+            window.location.href = '{{ route('testimonials','is') }}';
         });
     </script>
 @endsection

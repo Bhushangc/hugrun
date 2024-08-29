@@ -5,14 +5,14 @@
 @section('content')
         <section id="home">
         <div class="home-article">
-            <a href="{{ route('article.parents') }}" class="left-home-content"
+            <a href="{{ route('article.parents.polish') }}" class="left-home-content"
             ><div>
                 <div class="home-content">
                 <h2>Informacje dla rodziców</h2>
                 </div>
             </div></a
             >
-            <a href="{{ route('article.health') }}" class="right-home-content"
+            <a href="{{ route('article.health.polish') }}" class="right-home-content"
             ><div>
                 <div class="home-content">
                 <h2>Informacje o zdrowiu psychicznym</h2>
@@ -21,25 +21,25 @@
             </a>
         </div>
         <div class="home-banner-content">
-            <a href="{{ route('about') }}">
+            <a href="{{ route('about','po') }}">
                 <div class="banner-content">
                 <img src="{{ asset('images/frontend/link.svg')}}" alt="ikona linku" />
                 <p>O ORGANIZACJI</p>
                 </div>
             </a>
-            <a href="{{ url('/about#support') }}">
+            <a href="{{ url('/about/po#support') }}">
                 <div class="banner-content">
                 <img src="{{ asset('images/frontend/money.svg')}}" alt="ikona darowizny" />
                 <p>DAROWIZNA</p>
                 </div>
             </a>
-            <a href="{{ url('/home#booking') }}">
+            <a href="{{ url('/home/po#booking') }}">
                 <div class="banner-content">
                 <img src="{{ asset('images/frontend/bubble.svg')}}" alt="ikona bańki" />
                 <p>ZAREZERWUJ WYKŁAD</p>
                 </div>
             </a>
-            <a href="{{ url('/about#contact') }}">
+            <a href="{{ url('/about/po#contact') }}">
                 <div class="banner-content">
                 <img src="{{ asset('images/frontend/life.svg')}}" alt="ikona życia" />
                 <p>GDZIE IŚĆ?</p>
@@ -109,13 +109,13 @@
             }, 0);
         });
         document.getElementById('book-now-button').addEventListener('click', function() {
-            window.location.href = '{{ route('about') }}';
+            window.location.href = '{{ route('about','po') }}';
         });
         document.getElementById('resource-button').addEventListener('click', function() {
-            window.location.href = '{{ route('resources') }}';
+            window.location.href = '{{ route('resources','po') }}';
         });
         document.getElementById('testimonials-button').addEventListener('click', function() {
-            window.location.href = '{{ route('testimonials') }}';
+            window.location.href = '{{ route('testimonials','po') }}';
         });
     </script>
 

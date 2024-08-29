@@ -37,21 +37,21 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="{{ route('home') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="merki hér" /></a>
+                <a href="{{ route('home','is') }}"><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="merki hér" /></a>
             </div>
             <div class="nav-right-content">
                 <div class="nav-content">
                     <ul>
-                        <li><a href="{{ route('home') }}">Heim</a></li>
+                        <li><a href="{{ route('home','is')  }}">Heim</a></li>
                         <li>
                             <a>Greinar</a>
                             <ul class="dropdown-content">
-                                <li><a href="{{ route('article.parents') }}">Fyrir foreldra</a></li>
-                                <li><a href="{{ route('article.health') }}">Geðheilbrigði</a></li>
+                                <li><a href="{{ route('article.parents.islandic') }}">Fyrir foreldra</a></li>
+                                <li><a href="{{ route('article.health.islandic') }}">Geðheilbrigði</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ url('/home#booking') }}">Bóka fyrirlestur</a></li>
-                        <li><a href="{{ url('/about') }}">Um Okkur</a></li>
+                        <li><a href="{{ url('/home/is#booking') }}">Bóka fyrirlestur</a></li>
+                        <li><a href="{{ url('/about/is') }}">Um Okkur</a></li>
                     </ul>
                 </div>
                 <div class="language-toggle">
@@ -73,7 +73,7 @@
             <div class="mobile-nav-content">
                 <div class="top-nav">
                     <div class="logo">
-                        <a href="{{ route('home') }}"
+                        <a href="{{ route('home','is') }}"
                             ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="logo here"
                         /></a>
                         </div>
@@ -83,18 +83,18 @@
                 </div>
                 <div class="bottom-nav">
                     <ul>
-                        <li><a href="{{ route('home') }}">Heim</a></li>
+                        <li><a href="{{ route('home','is') }}">Heim</a></li>
                         <li>
                             <div class="dropdown">
                                 <p onclick="myFunction()" class="dropbtn">Greinar</p>
                                 <div id="myDropdown" class="dropdown-content">
-                                    <a href="{{ route('article.parents') }}">Fyrir foreldra<</a>
-                                    <a href="{{ route('article.health') }}">Geðheilbrigði</a>
+                                    <a href="{{ route('article.parents.islandic') }}">Fyrir foreldra<</a>
+                                    <a href="{{ route('article.health.islandic') }}">Geðheilbrigði</a>
                                 </div>
                             </div>
                         </li>
-                        <li><a href="{{ url('/home#booking') }}">Bóka fyrirlestur</a></li>
-                        <li><a href="{{ url('/about') }}">Um Okkur</a></li>
+                        <li><a href="{{ url('/home/is#booking') }}">Bóka fyrirlestur</a></li>
+                        <li><a href="{{ url('/about/is') }}">Um Okkur</a></li>
                     </ul>
                 </div>
             </div>
@@ -121,7 +121,7 @@
             <div class="footer-container">
                 <div class="footer-column-office">
                     <div class="logo">
-                        <a href="./hugrun.html"
+                        <a href="{{ route('home','is') }}"
                             ><img src="{{ asset('images/frontend/hugrun_logo.svg')}}" alt="merki hér"
                         /></a>
                         </div>
@@ -130,17 +130,17 @@
                 </div>
                 <div class="footer-column">
                     <h6>Nyttir tenglar</h6>
-                    <p><a href="{{ route('home') }}">Heim</a></p>
+                    <p><a href="{{ route('home','is') }}">Heim</a></p>
                     <div class="article-links">
                         <p><a>Grein</a></p>
                         <div class="sub-links">
-                            <p><a href="{{ route('article.parents') }}">Fyrir foreldra</a></p>
-                            <p><a href="{{ route('article.health') }}">Geðheilbrigði</a></p>
+                            <p><a href="{{ route('article.parents.islandic') }}">Fyrir foreldra</a></p>
+                            <p><a href="{{ route('article.health.islandic') }}">Geðheilbrigði</a></p>
                         </div>
                     </div>
-                    <p><a href="{{ url('/home#booking') }}">Bóka fyrirlestur</a></p>
-                    <p><a href="{{ url('/about#contact') }}">Hafa samband</a></p>
-                    <p><a href="{{ route('about') }}">Um</a></p>
+                    <p><a href="{{ url('/hom/ise#booking') }}">Bóka fyrirlestur</a></p>
+                    <p><a href="{{ url('/about/is#contact') }}">Hafa samband</a></p>
+                    <p><a href="{{ route('about','is') }}">Um</a></p>
                 </div>
                 
                 <div class="footer-column">
