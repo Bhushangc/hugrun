@@ -18,7 +18,7 @@ use App\Http\Controllers\FrontendController;
 */
 
 Route::get('/', [FrontendController::class, 'index'])->name('first');
-Route::get('/home/{lan?}', [FrontendController::class, 'index'])->name('home');
+Route::get('/home/{lan?}', [FrontendController::class, 'home'])->name('home');
 Route::get('/about/{lan?}', [FrontendController::class, 'about'])->name('about');
 Route::get('/resources/{lan?}', [FrontendController::class, 'resources'])->name('resources');
 Route::get('/testimonials/{lan?}', [FrontendController::class, 'testimonials'])->name('testimonials');

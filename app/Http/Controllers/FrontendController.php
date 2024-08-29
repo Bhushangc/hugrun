@@ -9,6 +9,17 @@ use App\Models\Tag;
 class FrontendController extends Controller
 {
     public function index($lan = null){
+        return redirect()->route('home');
+        // if ($lan == 'is'){
+        //     return view('frontend.islandic.index');
+        // }
+        // if ($lan == 'po'){
+        //     return view('frontend.polish.index');
+        // }
+
+        // return view('frontend.index');
+    }
+    public function home($lan = null){
         if ($lan == 'is'){
             return view('frontend.islandic.index');
         }
