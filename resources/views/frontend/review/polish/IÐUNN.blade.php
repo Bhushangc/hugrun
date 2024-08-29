@@ -76,7 +76,7 @@
     
     <section id="next_campaign">
         <div class="next_campaign_heading">
-            <h2>Następny artykuł &nbsp;<a href="#"><i class="fa-solid fa-arrow-right"></i></a></h2>
+            <h2>Następny artykuł &nbsp;<a href="{{ route('review', ['name' => 'ragnar', 'lan' => 'po']) }}"><i class="fa-solid fa-arrow-right"></i></a></h2>
         </div>
     </section>
     

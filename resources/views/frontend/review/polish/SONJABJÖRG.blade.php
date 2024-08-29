@@ -77,10 +77,10 @@
     
     <section id="next_campaign">
         <div class="next_campaign_heading">
-            <h2><a href="./hrefna-huld.html"><i class="fa-solid fa-arrow-left"></i></a>&nbsp;&nbsp;Poprzedni artykuł </h2>
+            <h2><a href="{{ route('review', ['name' => 'hrefna-huld', 'lan' => 'po']) }}"><i class="fa-solid fa-arrow-left"></i></a>&nbsp;&nbsp;Poprzedni artykuł </h2>
         </div>
         <div class="next_campaign_heading">
-            <h2>Następny artykuł &nbsp;<a href="./ragnar.html"><i class="fa-solid fa-arrow-right"></i></a></h2>
+            <h2>Następny artykuł &nbsp;<a href="{{ route('review', ['name' => 'ragnar', 'lan' => 'po']) }}"><i class="fa-solid fa-arrow-right"></i></a></h2>
         </div>
     </section>
     
