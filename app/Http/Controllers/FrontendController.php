@@ -76,6 +76,9 @@ class FrontendController extends Controller
             $currentBlog = Blog::find($id);
         }
         
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
         if($currentBlog->islandicBlog()->count()>0){
             $currentBlog->title = $currentBlog->islandicBlog()->first()->title;
             $currentBlog->content = $currentBlog->islandicBlog()->first()->content;
@@ -91,6 +94,9 @@ class FrontendController extends Controller
     public function articleIslandicParents2(){
         $allBlogs = Blog::where('type','parents')->get();
         $currentBlog = Blog::where('type','parents')->first();
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
         if($currentBlog->islandicBlog()->count()>0){
             $currentBlog->title = $currentBlog->islandicBlog()->first()->title;
             $currentBlog->content = $currentBlog->islandicBlog()->first()->content;
@@ -110,6 +116,9 @@ class FrontendController extends Controller
         if($id){
             $currentBlog = Blog::find($id);
         }
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
         if($currentBlog->islandicBlog()->count()>0){
             $currentBlog->title = $currentBlog->islandicBlog()->first()->title;
             $currentBlog->content = $currentBlog->islandicBlog()->first()->content;
@@ -124,6 +133,9 @@ class FrontendController extends Controller
     public function articleIslandicMentalHealth2(){
         $allBlogs = Blog::where('type','mental_health')->get();
         $currentBlog = Blog::where('type','mental_health')->first();
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
         if($currentBlog->islandicBlog()->count()>0){
             $currentBlog->title = $currentBlog->islandicBlog()->first()->title;
             $currentBlog->content = $currentBlog->islandicBlog()->first()->content;
@@ -142,6 +154,9 @@ class FrontendController extends Controller
         if($id){
             $currentBlog = Blog::find($id);
         }
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
         if($currentBlog->polishBlog()->count()>0){
             $currentBlog->title = $currentBlog->polishBlog()->first()->title;
             $currentBlog->content = $currentBlog->polishBlog()->first()->content;
@@ -156,6 +171,9 @@ class FrontendController extends Controller
     public function articlePolishParents2(){
         $allBlogs = Blog::where('type','parents')->get();
         $currentBlog = Blog::where('type','parents')->first();
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
 
         if($currentBlog->polishBlog()->count()>0){
             $currentBlog->title = $currentBlog->polishBlog()->first()->title;
@@ -176,6 +194,9 @@ class FrontendController extends Controller
         if($id){
             $currentBlog = Blog::find($id);
         }
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
         if($currentBlog->polishBlog()->count()>0){
             $currentBlog->title = $currentBlog->polishBlog()->first()->title;
             $currentBlog->content = $currentBlog->polishBlog()->first()->content;
@@ -190,6 +211,9 @@ class FrontendController extends Controller
     public function articlePolishMentalHealth2(){
         $allBlogs = Blog::where('type','mental_health')->get();
         $currentBlog = Blog::where('type','mental_health')->first();
+        if(!$currentBlog){
+            return back()->with('error','no article');
+        }
         if($currentBlog->polishBlog()->count()>0){
             $currentBlog->title = $currentBlog->polishBlog()->first()->title;
             $currentBlog->content = $currentBlog->polishBlog()->first()->content;
