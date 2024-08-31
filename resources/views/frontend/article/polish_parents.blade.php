@@ -10,7 +10,7 @@
             <div class="articles-title">
                 <h1>Upplýsingar fyrir foreldra</h1> <hr>
                 @foreach ($allBlogs as $blog)
-                    <p @if ($blog->id == $currentBlog->id)id="current-page"@endif><a href="{{ route('article.health.is', ['id' => $blog->id]) }}">
+                    <p @if ($blog->id == $currentBlog->id)id="current-page"@endif><a href="{{ route('article.parents.po', ['id' => $blog->id]) }}">
                             @if ($blog->polishBlog)
                                 {{$blog->polishBlog->title}}
                             @else
@@ -31,7 +31,7 @@
                 </div>
                 <div class="bottom">
                     @foreach ($allBlogs as $blog)
-                        <p @if ($blog->id == $currentBlog->id)id="current-page"@endif><a href="{{ route('article.health.is', ['id' => $blog->id]) }}">
+                        <p @if ($blog->id == $currentBlog->id)id="current-page"@endif><a href="{{ route('article.parents.po', ['id' => $blog->id]) }}">
                                 @if ($blog->polishBlog)
                                     {{$blog->polishBlog->title}}
                                 @else
