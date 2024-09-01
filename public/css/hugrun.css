@@ -384,12 +384,12 @@ button:hover > a{
 }
 
 .emergency-image img {
-    width: 10rem;
     height: 10rem;
+    flex:1;
 }
 
 .resources-content{
-    width: 34rem;
+    flex:1;
 }
 
 .resources{
