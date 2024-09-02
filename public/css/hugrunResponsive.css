@@ -1078,8 +1078,12 @@
     }
 
     .testimonials-image-div {
-        min-height: 50vh;
+        min-height: 26vh;
     } 
+    
+    .testimonials--div--image{
+        Flex-direction:column;
+    }
 
     .contact-right-content {
         width: 100%;
