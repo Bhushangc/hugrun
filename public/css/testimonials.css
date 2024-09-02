@@ -87,7 +87,7 @@
 .testimonials-content-div, .testimonials-image-div{
     /* width: 50%; */
     flex: 1;
-    min-height: 100vh;
+    min-height: auto;
 }
 
 .testimonials-image-div img{
@@ -98,7 +98,7 @@
 .testimonials-content-div{
     color: var(--primary-color);
     text-align: center;
-    padding: 14rem 4rem 0 4rem;
+    padding: 6rem 4rem 0 4rem;
     align-items: center;
     letter-spacing: 0.5px;
 }
