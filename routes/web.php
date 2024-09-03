@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ use App\Http\Controllers\FrontendController;
 Route::get('/', [FrontendController::class, 'index'])->name('first');
 Route::get('/home/{lan?}', [FrontendController::class, 'home'])->name('home');
 Route::get('/about/{lan?}', [FrontendController::class, 'about'])->name('about');
+Route::post('/postContact', [FrontendController::class, 'postContact'])->name('postContact');
 Route::get('/resources/{lan?}', [FrontendController::class, 'resources'])->name('resources');
 Route::get('/testimonials/{lan?}', [FrontendController::class, 'testimonials'])->name('testimonials');
 Route::get('/review/{name?}/{lan?}', [FrontendController::class, 'review'])->name('review');
@@ -39,6 +41,7 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::middleware(['admin'])->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
         Route::get('/blog', [BlogController::class, 'index'])->name('blog');
         Route::get('/blog/create', [BlogController::class, 'create'])->name('blog.create');

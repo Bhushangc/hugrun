@@ -15,6 +15,7 @@
             <ul>
                 <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
                 <li><a href="{{route('admin.blog')}}">Blogs</a></li>
+                <li><a href="{{route('admin.contact')}}">Contact Us Feedback</a></li>
 
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Profile</a>

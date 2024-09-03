@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\Tag;
+use App\Models\ContactUs;
 
 class FrontendController extends Controller
 {
@@ -38,6 +39,12 @@ class FrontendController extends Controller
             return view('frontend.polish.about');
         }
         return view('frontend.about');
+    }
+
+    public function postContact(Request $request){
+        $data = $request->only('name','email','subject','phone','message');
+        ContactUs::insert($data);
+        return back();
     }
 
     public function articleParents($id=null){

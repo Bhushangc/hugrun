@@ -167,7 +167,8 @@
             </div>
             </div>
         <div class="contact-left">
-            <form action="#">
+            <form action="{{route('postContact')}}" method="post">
+                @csrf
                 <div class="form-row">
                     <div class="form-div">
                         <i class="fa-regular fa-user"></i>
