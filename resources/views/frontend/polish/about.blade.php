@@ -50,7 +50,7 @@
             <img src="{{ asset('images/frontend/donation.png')}}" alt="#" />
         </div>
     </section>
-    <section id="bod">
+    {{-- <section id="bod">
         <h1>The board of directors of the organisation</h1>
         <div class="card-divs">
             <div class="card visible">
@@ -154,13 +154,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section id="contact">
         <div class="contact-right-content">
-            <p class="par">Skontaktuj się z nami</p>
-            <h1>Masz pytania? Skontaktuj się z nami!</h1>
-            <p class="par-content">Hugrún ma na celu edukację młodych ludzi w Islandii na temat zdrowia psychicznego, zaburzeń oraz dostępnych zasobów, zwiększając świadomość społeczną poprzez bezpłatne wykłady, wydarzenia i platformy internetowe.</p>
-
+            <p class="par">Contact Us</p>
+            <h1>Have questions? Get in touch!</h1>
+            <p class="par-content">Hugrún aims to educate young people in Iceland on mental health, disorders, and available resources, increasing social awareness through free lectures, events, and online platforms. </p>
             <div class="contact-div">
                 <i class="fa-solid fa-location-dot"></i>
                 <p>Iceland</p>
@@ -171,7 +170,8 @@
             </div>
             </div>
         <div class="contact-left">
-            <form action="#">
+            <form action="{{route('postContact')}}" method="post">
+                @csrf
                 <div class="form-row">
                     <div class="form-div">
                         <i class="fa-regular fa-user"></i>

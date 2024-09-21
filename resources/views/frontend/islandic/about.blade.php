@@ -48,7 +48,7 @@
             <img src="{{ asset('images/frontend/donation.png')}}" alt="#" />
         </div>
     </section>
-    <section id="bod">
+    {{-- <section id="bod">
         <h1>The board of directors of the organisation</h1>
         <div class="card-divs">
             <div class="card visible">
@@ -152,13 +152,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section id="contact">
         <div class="contact-right-content">
-            <p class="par">Hafðu samband</p>
-            <h1>Ertu með spurningar? Hafðu samband!</h1>
-            <p class="par-content">Hugrún miðar að því að fræða ungt fólk á Íslandi um geðheilbrigði, geðsjúkdóma og tiltæk úrræði, auk þess að auka samfélagslega vitund í gegnum ókeypis fyrirlestra, viðburði og netmiðla.</p>
-
+            <p class="par">Contact Us</p>
+            <h1>Have questions? Get in touch!</h1>
+            <p class="par-content">Hugrún aims to educate young people in Iceland on mental health, disorders, and available resources, increasing social awareness through free lectures, events, and online platforms. </p>
+            <div class="contact-div">
                 <i class="fa-solid fa-location-dot"></i>
                 <p>Iceland</p>
             </div>
@@ -168,7 +168,8 @@
             </div>
             </div>
         <div class="contact-left">
-            <form action="#">
+            <form action="{{route('postContact')}}" method="post">
+                @csrf
                 <div class="form-row">
                     <div class="form-div">
                         <i class="fa-regular fa-user"></i>

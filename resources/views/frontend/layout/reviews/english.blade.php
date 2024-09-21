@@ -50,7 +50,7 @@
                                 <li><a href="{{ route('article.health') }}">Mental Health</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ url('home#booking') }}">Book a Lecture</a></li> 
+                        {{-- <li><a href="{{ url('home#booking') }}">Book a Lecture</a></li>  --}}
                         <li><a href="{{ url('/about') }}">About Us</a></li>
                     </ul>
                 </div>
@@ -93,7 +93,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li><a href="{{ url('/home#booking') }}">Book a Lecture</a></li>
+                        {{-- <li><a href="{{ url('/home#booking') }}">Book a Lecture</a></li> --}}
                         <li><a href="{{ url('/about#contact') }}">Contact</a></li>
                     </ul>
                 </div>
@@ -138,7 +138,7 @@
                                 <p><a href="{{ route('article.health') }}">Mental Health</a></p>
                             </div>
                         </div>
-                        <p><a href="{{ url('/home#booking') }}">Book Lecture</a></p>
+                        {{-- <p><a href="{{ url('/home#booking') }}">Book Lecture</a></p> --}}
                         <p><a href="{{ url('/about#contact') }}">Contact</a></p>
                         <p><a href="{{ route('about') }}">About</a></p>
                     </div>

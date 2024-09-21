@@ -9,8 +9,8 @@ use App\Models\ContactUs;
 
 class FrontendController extends Controller
 {
-    public function index($lan = null){
-        return redirect()->route('home');
+    public function index(){
+        return redirect()->route('home', ['lan' => 'is']);
         // if ($lan == 'is'){
         //     return view('frontend.islandic.index');
         // }

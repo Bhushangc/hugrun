@@ -48,7 +48,7 @@
                                     <li><a href="{{ route('article.health.islandic') }}">Geðheilbrigði</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{ url('/home/is#booking') }}">Bóka fyrirlestur</a></li>
+                            {{-- <li><a href="{{ url('/home/is#booking') }}">Bóka fyrirlestur</a></li> --}}
                             <li><a href="{{ url('/about/is') }}">Um Okkur</a></li>
                         </ul>
                     </div>
@@ -106,7 +106,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="{{ url('/home/is#booking') }}">Bóka fyrirlestur</a></li>
+                            {{-- <li><a href="{{ url('/home/is#booking') }}">Bóka fyrirlestur</a></li> --}}
                             <li><a href="{{ url('/about/is') }}">Um Okkur</a></li>
                         </ul>
                     </div>
@@ -153,7 +153,7 @@
                                 <p><a href="{{ route('article.health.islandic') }}">Geðheilbrigði</a></p>
                             </div>
                         </div>
-                        <p><a href="{{ url('/hom/ise#booking') }}">Bóka fyrirlestur</a></p>
+                        {{-- <p><a href="{{ url('/hom/ise#booking') }}">Bóka fyrirlestur</a></p> --}}
                         <p><a href="{{ url('/about/is#contact') }}">Hafa samband</a></p>
                         <p><a href="{{ route('about','is') }}">Um</a></p>
                     </div>

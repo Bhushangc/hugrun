@@ -47,7 +47,7 @@
             <img src="{{ asset('images/frontend/donation.png')}}" alt="#" />
         </div>
     </section>
-    <section id="bod">
+    {{-- <section id="bod">
         <h1>The board of directors of the organisation</h1>
         <div class="card-divs">
             <div class="card visible">
@@ -151,7 +151,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <section id="contact">
         <div class="contact-right-content">
             <p class="par">Contact Us</p>

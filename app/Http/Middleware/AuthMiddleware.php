@@ -16,7 +16,6 @@ class AuthMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-
         if (!Auth::user()) {
             return redirect()->route('login')->withErrors([
                 'email' => 'Please log in to access the dashboard.',

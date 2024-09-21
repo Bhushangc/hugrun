@@ -49,7 +49,7 @@
                                     <li><a href="{{ route('article.health.polish') }}">Zdrowie psychiczne</a></li>
                                 </ul>
                             </li>
-                            <li><a href="{{ url('/home/po#booking') }}">Zarezerwuj wykład</a></li>
+                            {{-- <li><a href="{{ url('/home/po#booking') }}">Zarezerwuj wykład</a></li> --}}
                             <li><a href="{{ url('/about/po') }}">O nas</a></li>
                         </ul>
                     </div>
@@ -108,7 +108,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li><a href="{{ url('/home/p0#booking') }}">Zarezerwuj wykład</a></li>
+                            {{-- <li><a href="{{ url('/home/p0#booking') }}">Zarezerwuj wykład</a></li> --}}
                             <li><a href="{{ url('/about/po') }}">O nas</a></li>
                         </ul>
                     </div>
@@ -155,7 +155,7 @@
                         <p><a href="{{ route('article.health.polish') }}">Zdrowie psychiczne</a></p>
                     </div>
                 </div>
-                <p><a href="{{ url('/home/po#booking') }}">Zarezerwuj wykład</a></p>
+                {{-- <p><a href="{{ url('/home/po#booking') }}">Zarezerwuj wykład</a></p> --}}
                 <p><a href="{{ url('/about/po#contact') }}">Kontakt</a></p>
                 <p><a href="{{ route('about','po') }}">O nas</a></p>
             </div>
