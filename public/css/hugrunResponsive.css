@@ -755,7 +755,26 @@
         .book-content-div{
             width: 100%;
         }
-        
+        .clicked-image img {
+            max-width: 100%; 
+            width: 90%; 
+        }
+        .announcement-content h2 {
+            font-size: 2rem;
+        }
+        .announcement-content p {
+            font-size: 1rem;
+        }
+        .modal-content {
+            width: 90%;
+        }
+        .modal-content h2 {
+            font-size: 1.8rem;
+        }
+        .modal-content p {
+            font-size: 1rem;
+        }
+
         
         
 }
@@ -1223,6 +1242,10 @@
         border: none;
         width: 100%;
     }
+    .clicked-image img {
+        width: 100%; 
+    }
+
 }
 .mindful-image-div {
     background-size: cover; 

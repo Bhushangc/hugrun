@@ -33,10 +33,10 @@
                 <p>DAROWIZNA</p>
                 </div>
             </a>
-            <a href="{{ url('/home/po#booking') }}">
+            <a href="{{ route('resources','po') }}">
                 <div class="banner-content">
                 <img src="{{ asset('images/frontend/bubble.svg')}}" alt="ikona bańki" />
-                <p>ZAREZERWUJ WYKŁAD</p>
+                <p>Zasoby</p>
                 </div>
             </a>
             <a href="{{ url('/about/po#contact') }}">
@@ -50,7 +50,7 @@
             <a href="javascript:void(0);" id="scrollToTop"> <div class="circle"> <i class="fa-solid fa-arrow-up"></i> </div></a>
         </div>
         </section>
-        <section id="booking">
+        {{-- <section id="booking">
         <div class="book-image">
             <img src="{{ asset('images/frontend/class.png')}}" alt="#" />
         </div>
@@ -62,7 +62,7 @@
             </p>
             <button id="book-now-button">Zarezerwuj Teraz</button>
         </div>
-        </section>
+        </section> --}}
         <section id="support-info">
         <div class="emergency">
             <div class="emergency-content">
@@ -97,6 +97,23 @@
             </div>
         </div>
         </section>
+
+        <section id="section--clicked">
+            <div class="clicked-image">
+                <img src="{{ asset('images/frontend/announcement.jpg')}}" alt="">
+            </div>
+        </section>
+        <div id="announcement-modal" class="modal" style="display: block;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Announcement</h2>
+                <p>Po wartościowej pracy, Stowarzyszenie Psychologiczne Hugrún podjęło trudną decyzję o zakończeniu swojej działalności. Decyzja ta nie została podjęta pochopnie, jednak w ostatnich latach zauważyliśmy spadek zainteresowania i zaangażowania, zwłaszcza wśród studentów uniwersytetów, którzy odgrywali kluczową rolę jako wolontariusze w edukacji prowadzonej przez stowarzyszenie.</p>
+                <p>Od momentu założenia stowarzyszenia, Hugrún miało na celu zwiększenie świadomości na temat zdrowia psychicznego i wspieranie młodych ludzi w refleksji nad własnym zdrowiem psychicznym. Cele te stanowiły podstawę wszystkich naszych działań, i jesteśmy nieskończenie wdzięczni tym, którzy w ostatnich latach wnieśli swój wkład, zarówno wewnątrz, jak i na zewnątrz stowarzyszenia.</p>
+                <p>Bez tych wolontariuszy i aktywnego udziału studentów uniwersytetów, kontynuowanie działalności stowarzyszenia nie jest możliwe. Dlatego zdecydowaliśmy się zamknąć ten rozdział z godnością i wdzięcznością w sercach.</p>
+                <p>Nawet jeśli Hugrún kończy swoją działalność, chcemy przypomnieć o znaczeniu dbania o własne zdrowie psychiczne i zdrowie innych. Dbanie o dobrostan psychiczny jest kluczowe, dlatego ważne jest, aby szukać pomocy, gdy jest potrzebna, otwarcie rozmawiać o swoich uczuciach i wspierać innych wokół siebie.</p>
+                <p>Serdecznie dziękujemy wszystkim, którzy wspierali nas przez te lata i mamy nadzieję, że nasze przesłanie będzie trwało. Zdrowie psychiczne ma znaczenie, i mamy nadzieję, że nadal będziemy dążyć do lepszego świata, w którym każdy otrzyma potrzebną pomoc i wsparcie.</p>
+            </div>
+        </div>
 
     <script src="{{ asset('/js/hugrun.js')}}"></script>
     <script>

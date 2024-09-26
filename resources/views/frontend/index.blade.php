@@ -34,10 +34,10 @@
                     <p>DONATION</p>
                 </div>
              </a>
-             <a href="{{ url('/home#booking') }}">
+             <a href="{{ route('resources') }}">
                 <div class="banner-content">
                     <img src="{{ asset('images/frontend/bubble.svg')}}" alt="bubble logo" />
-                    <p>BOOK A LECTURE</p>
+                    <p>Resources</p>
                 </div>
              </a>
              <a href="{{ url('/about#contact') }}">
@@ -51,7 +51,7 @@
             <a href="javascript:void(0);" id="scrollToTop"> <div class="circle"> <i class="fa-solid fa-arrow-up"></i> </div></a>
         </div>
         </section>
-        <section id="booking">
+        {{-- <section id="booking">
         <div class="book-image">
             <img src="{{ asset('images/frontend/class.png')}}" alt="#" />
         </div>
@@ -66,7 +66,7 @@
             </p>
             <button id="book-now-button">Book Now</button>
         </div>
-        </section>
+        </section> --}}
         <section id="support-info">
         <div class="emergency">
             <div class="emergency-content">
@@ -111,7 +111,24 @@
             </div>
         </div>
         </section>
-   
+
+        <section id="section--clicked">
+            <div class="clicked-image">
+                <img src="{{ asset('images/frontend/announcement.jpg')}}" alt="">
+            </div>
+        </section>
+        <div id="announcement-modal" class="modal" style="display: block;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Announcement</h2>
+                <p>After valuable work, Hugrún Psychological Society has now made the difficult decision to close its operations. This decision has not been taken lightly, but in recent years we have noticed a decrease in interest and participation, especially among university students who have played a key role in volunteering in education by society.</p>
+                <p>Since the founding of the association, Hugrún has had the goal to increase awareness of mental health and support young people in thinking about their own mental health. These goals have been the basis of all our operations, and we are infinitely grateful to those who have contributed in recent years, both within and outside the society.</p>
+                <p>Without these volunteers and the active participation of university students, it is not possible to continue with the activities of the society. Therefore, we’ve decided to close this chapter with dignity and gratitude in our hearts.</p>
+                <p>Even though Hugrún is closing its operations, we want to remind you of the importance of continuing to look after your own mental health and others. Nurturing mental wellbeing is vital, so it's important to seek help when needed, talk openly about your feelings, and be supportive to others around you.</p>
+                <p>We sincerely thank all those who have supported us over the years and hope that our message will live on. Mental health matters and hopefully we will continue to work towards a better world where everyone gets the help and support they need.</p>
+            </div>
+        </div>
+
     <script src="{{ asset('/js/hugrun.js')}}"></script>
     <script>
         document.getElementById('scrollToTop').addEventListener('click', function() {

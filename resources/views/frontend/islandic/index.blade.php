@@ -35,10 +35,10 @@
                 <p>GJÖF</p>
                 </div>
             </a>
-            <a href="{{ url('/home/is#booking') }}">
+            <a href="{{ route('resources','is') }}">
                 <div class="banner-content">
                 <img src="{{ asset('images/frontend/bubble.svg')}}" alt="kúla merki" />
-                <p>BÓKA FYRIRLESTUR</p>
+                <p>Heimildir</p>
                 </div>
             </a>
             <a href="{{ url('/about/is#contact') }}">
@@ -52,7 +52,7 @@
             <a href="javascript:void(0);" id="scrollToTop"> <div class="circle"> <i class="fa-solid fa-arrow-up"></i> </div></a>
         </div>
         </section>
-        <section id="booking">
+        {{-- <section id="booking">
         <div class="book-image">
             <img src="{{ asset('images/frontend/class.png')}}" alt="#" />
         </div>
@@ -67,7 +67,7 @@
             </p>
             <button id="book-now-button">Bóka Núna</button>
         </div>
-        </section>
+        </section> --}}
         <section id="support-info">
         <div class="emergency">
             <div class="emergency-content">
@@ -102,6 +102,24 @@
             </div>
         </div>
         </section>
+        <section id="section--clicked">
+            <div class="clicked-image">
+                <img src="{{ asset('images/frontend/announcement.jpg')}}" alt="">
+            </div>
+        </section>
+        <div id="announcement-modal" class="modal" style="display: block;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Announcement</h2>
+                <p>
+                    Við viljum tilkynna að eftir dýrmæt störf hefur Hugrún geðfræðslufélag nú tekið þá erfiðu ákvörðun að slíta starfsemi sinni. Þessi ákvörðun hefur ekki verið tekin léttilega, en á undanförnum árum höfum við orðið vör við minnkandi áhuga og þátttöku, sérstaklega meðal háskólanema sem hafa gegnt lykilhlutverki í sjálfboðsstarfi í fræðslum á vegum félagsins.
+                    Frá stofnun félagsins hefur Hugrún haft það að markmiði að auka vitund um geðheilsu og styðja ungt fólk í að hugsa um eigin geðheilsu. Þessi markmið hafa verið grundvöllur allrar okkar starfsemi, og við erum óendanlega þakklát þeim sem hafa lagt sitt af mörkum á undanförnum árum, bæði innan og utan félagsins.
+                    Án þessa sjálfboðaliða og virkrar þátttöku háskólanema er ekki hægt að halda áfram með starfsemi félagsins. Þess vegna höfum við ákveðið að loka þessum kafla með reisn og þakklæti í hjarta.
+                    Þrátt fyrir að Hugrún leggi niður starfsemi sína, viljum við minna ykkur á mikilvægi þess að halda áfram að hugsa um eigin geðheilsu og annara. Að hlúa að andlegri vellíðan er lífsnauðsynlegt, og því mikilvægt að leita sér hjálpar þegar þess þarf, tala opinskátt um tilfinningar sínar og styðja við aðra í kringum sig.
+                    Við þökkum kærlega öllum þeim sem hafa stutt við bakið á okkur í gegnum árin og vonum að boðskapur okkar muni lifa áfram. Geðheilsa skiptir máli og vonandi verður haldið áfram að vinna að betri heimi þar sem allir fá þá hjálp og stuðning sem þeir þurfa.
+                </p>   
+            </div>
+        </div>
 
     <script src="{{ asset('/js/hugrun.js')}}"></script>
     <script>

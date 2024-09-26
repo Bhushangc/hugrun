@@ -48,3 +48,22 @@ window.onclick = function(event) {
     }
     }
 }
+var modal = document.getElementById('announcement-modal');
+
+        var image = document.querySelector('.clicked-image');
+
+        var span = document.querySelector('.close');
+
+        image.addEventListener('click', function() {
+            modal.style.display = 'block';
+        });
+
+        span.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
