@@ -110,7 +110,7 @@
         <div id="announcement-modal" class="modal" style="display: block;">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h2>Announcement</h2>
+                <h2>Tilkynning</h2>
                 <p>
                     Við viljum tilkynna að eftir dýrmæt störf hefur Hugrún geðfræðslufélag nú tekið þá erfiðu ákvörðun að slíta starfsemi sinni. Þessi ákvörðun hefur ekki verið tekin léttilega, en á undanförnum árum höfum við orðið vör við minnkandi áhuga og þátttöku, sérstaklega meðal háskólanema sem hafa gegnt lykilhlutverki í sjálfboðsstarfi í fræðslum á vegum félagsins.
                     Frá stofnun félagsins hefur Hugrún haft það að markmiði að auka vitund um geðheilsu og styðja ungt fólk í að hugsa um eigin geðheilsu. Þessi markmið hafa verið grundvöllur allrar okkar starfsemi, og við erum óendanlega þakklát þeim sem hafa lagt sitt af mörkum á undanförnum árum, bæði innan og utan félagsins.

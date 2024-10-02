@@ -101,7 +101,7 @@
                                 <div class="dropdown">
                                     <p onclick="myFunction()" class="dropbtn">Greinar</p>
                                     <div id="myDropdown" class="dropdown-content">
-                                        <a href="{{ route('article.parents.islandic') }}">Fyrir foreldra<</a>
+                                        <a href="{{ route('article.parents.islandic') }}">Fyrir foreldra</a>
                                         <a href="{{ route('article.health.islandic') }}">Geðheilbrigði</a>
                                     </div>
                                 </div>

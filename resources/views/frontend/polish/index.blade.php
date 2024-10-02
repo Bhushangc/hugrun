@@ -106,7 +106,7 @@
         <div id="announcement-modal" class="modal" style="display: block;">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h2>Announcement</h2>
+                <h2>Ogłoszenie</h2>
                 <p>Po wartościowej pracy, Stowarzyszenie Psychologiczne Hugrún podjęło trudną decyzję o zakończeniu swojej działalności. Decyzja ta nie została podjęta pochopnie, jednak w ostatnich latach zauważyliśmy spadek zainteresowania i zaangażowania, zwłaszcza wśród studentów uniwersytetów, którzy odgrywali kluczową rolę jako wolontariusze w edukacji prowadzonej przez stowarzyszenie.</p>
                 <p>Od momentu założenia stowarzyszenia, Hugrún miało na celu zwiększenie świadomości na temat zdrowia psychicznego i wspieranie młodych ludzi w refleksji nad własnym zdrowiem psychicznym. Cele te stanowiły podstawę wszystkich naszych działań, i jesteśmy nieskończenie wdzięczni tym, którzy w ostatnich latach wnieśli swój wkład, zarówno wewnątrz, jak i na zewnątrz stowarzyszenia.</p>
                 <p>Bez tych wolontariuszy i aktywnego udziału studentów uniwersytetów, kontynuowanie działalności stowarzyszenia nie jest możliwe. Dlatego zdecydowaliśmy się zamknąć ten rozdział z godnością i wdzięcznością w sercach.</p>
