@@ -131,15 +131,22 @@
                 });
             }, 0);
         });
-        document.getElementById('book-now-button').addEventListener('click', function() {
-            window.location.href = '{{ route('about','is') }}';
-        });
+        // document.getElementById('book-now-button').addEventListener('click', function() {
+        //     window.location.href = '{{ route('about','is') }}';
+        // });
         document.getElementById('resource-button').addEventListener('click', function() {
             window.location.href = '{{ route('resources','is') }}';
         });
         document.getElementById('testimonials-button').addEventListener('click', function() {
             window.location.href = '{{ route('testimonials','is') }}';
         });
+        if (sessionStorage.getItem('announcementSeen')) {
+            document.getElementById('announcement-modal').style.display = 'none';
+        }
+        if (!sessionStorage.getItem('announcementSeen')) {
+            document.getElementById('announcement-modal').style.display = 'block';
+            sessionStorage.setItem('announcementSeen',true);
+        }
     </script>
 @endsection
 

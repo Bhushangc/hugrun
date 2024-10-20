@@ -125,15 +125,22 @@
                 });
             }, 0);
         });
-        document.getElementById('book-now-button').addEventListener('click', function() {
-            window.location.href = '{{ route('about','po') }}';
-        });
+        // document.getElementById('book-now-button').addEventListener('click', function() {
+        //     window.location.href = '{{ route('about','po') }}';
+        // });
         document.getElementById('resource-button').addEventListener('click', function() {
             window.location.href = '{{ route('resources','po') }}';
         });
         document.getElementById('testimonials-button').addEventListener('click', function() {
             window.location.href = '{{ route('testimonials','po') }}';
         });
+        if (sessionStorage.getItem('announcementSeen')) {
+            document.getElementById('announcement-modal').style.display = 'none';
+        }
+        if (!sessionStorage.getItem('announcementSeen')) {
+            document.getElementById('announcement-modal').style.display = 'block';
+            sessionStorage.setItem('announcementSeen',true);
+        }
     </script>
 
 @endsection
